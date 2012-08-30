@@ -1,0 +1,4 @@
+dashboard
+=========
+
+General purpose dashboard.
