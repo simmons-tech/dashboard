@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', 'dashboard.views.home'),
     url(r'^events/', include('events.urls')),
     url(r'^nextbus/', include('nextbus.urls')),
     url(r'^news/', include('news.urls')),
