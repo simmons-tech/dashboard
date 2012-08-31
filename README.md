@@ -10,8 +10,6 @@ ground floor monitors.
 The events app provides a daily events calendar. The MIT RSS feed is parsed and is available at /events. Each event object has a title, description, and time. 
 
 ## Nextbus
-For information on the Nextbus api visit http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf. The code was copied from the Nextbus code used in the Dormbase project. It has been lightly modified.
+For information on the Nextbus api visit http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf. The Nextbus code evolved from the code used for Dormbase. 
 
-The next 3 shuttles can be accessed from /nextbus. It will return a json object with shuttle, next, second, third, as seen below:
-
-{"shuttle": "Saferide Cambridge West", "second": "41", "third": "71", "next": "11"}
+The next 3 shuttles can be accessed from /nextbus. It will return a json object with title, next, second, and third.
