@@ -1,12 +1,17 @@
 Simmons Hall Dashboard
 =========
 # Introduction
-This project is a redesign of the simmonsdash project. The goal is to
-create an expandable and easy to deploy dashboard for the Simmons Hall
-ground floor monitors.
+This project is a reborn simmonsdash. The goal is to create a maintainable and expandable dashboard system for Simmons Hall. We are making the code as generic as possible so that it's usable by others. One of the main goals is to make the code accessible to future students and Simmons Tech members. We are doing our best to document our process and methodology so that anyone can pick up where we left off. If you have any questions about the project or want to contribute please contact us at simmons-tech@mit.edu. 
+
+# Architecture
+The back-end is written in Django and the front-end is HTML5 and Javascript. The Javascript is written in CoffeeScript. The intent was to make the project as pythonic as possible because of MIT's focus on the language. We hope this makes the project more accessible to you. 
+
+Each widget on the dashboard is its own application. Each application is responsible for supplying its own static files, urls, and views. Each application should be standalone. Widget HTML code is currently added to the dashboard/templates/index.html file. The existence of static/ must be made known in dashboard/settings.py.
 
 # Requirments
+## Python Libraries
 * pywapi
+* django
 
 # Applications
 ## Events
@@ -23,4 +28,10 @@ The news app provides news from BBC. The feed is parsed and returns an array of 
 ## Weather
 Condition codes: http://developer.yahoo.com/weather/#codes
 
-The weather app using the pywapi library and uses Yahoo as its data source. The app can be accessed from /weather and returns a JSON object with current, today, and tomorrow attributes. 'current' has current temp, description, and code. 'today' and 'tomorrow' have high, low, and description. Units are degrees Fahrenheit. 
+The weather app using the pywapi library and uses Yahoo as its data source. The app can be accessed from /weather and returns a JSON object with current, today, and tomorrow attributes. 'current' has current temp, description, and code. 'today' and 'tomorrow' have high, low, description, code. Units are degrees Fahrenheit. 
+
+# Adding Applications
+* Run: python manage.py startapp <appname>
+* In the app's directory mkdir static/
+* Modify settings.py to search the new static directory
+* Add the widget dashboard/templates/index.html, comment the widget
