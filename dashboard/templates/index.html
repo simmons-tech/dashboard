@@ -4,12 +4,38 @@
     <title></title>
   </head>
   <body>
+
+    <!-- Nextbus Widget -->
     <div id="nextbus">
       <h1  class="title"></h1>
       <h2 class="next"></h2>
       <h3 class="second"></h3>
       <h3 class="third"></h3>
-      </ul>
+    </div>
+    <!-- End Nextbus Widget -->
+
+    <!--Weather Widget -->
+    <div id="weather">
+      <h1  class="title"></h1>
+
+      <div id="current">
+	<h4 class="temp"></h4>
+	<h4 class="description"></h4>
+      </div>
+
+      <div id="today">
+	<h4 class="high"></h4>
+	<h4 class="low"></h4>
+	<h4 class="description"></h4>
+      </div>
+
+      <div id="tomorrow">
+	<h4 class="high"></h4>
+	<h4 class="low"></h4>
+	<h4 class="description"></h4>
+      </div>
+    <!--End Weather Widget -->
+
     </div>
 
    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -21,5 +47,6 @@
     <script src="{{ STATIC_URL }}js/underscore.js"></script>
     <script src="{{ STATIC_URL }}js/backbone.js"></script>
     <script src="{{ STATIC_URL }}js/nextbus.js"></script>
+    <script src="{{ STATIC_URL }}js/weather.js"></script>
   </body>
 </html>
