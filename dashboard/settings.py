@@ -75,6 +75,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, "static/"),
     os.path.join(PROJECT_ROOT, "../nextbus/static/"),
     os.path.join(PROJECT_ROOT, "../weather/static/"),
+    os.path.join(PROJECT_ROOT, "../events/static/"),
 
 )
 

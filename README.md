@@ -35,3 +35,4 @@ The weather app using the pywapi library and uses Yahoo as its data source. The 
 * In the app's directory mkdir static/
 * Modify settings.py to search the new static directory
 * Add the widget dashboard/templates/index.html, comment the widget
+* Add script to index.html
