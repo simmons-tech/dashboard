@@ -35,7 +35,8 @@ def getWeather(request):
                             'description': 'NA',
                             'code': 'NA',}
     
-    weather = { 'current': current,
+    weather = { 'title': 'Yahoo! Weather',
+                'current': current,
                 'today': today,
                 'tomorrow': tomorrow,}
     
