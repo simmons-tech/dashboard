@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="clock.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.23"
+     inkscape:cx="251.5175"
+     inkscape:cy="137.71181"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1024"
+     inkscape:window-height="576"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-796.36218)">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="M 128 0 C 57.307553 -9.4739031e-15 0 57.307552 0 128 C -9.4739031e-15 198.69245 57.307553 256 128 256 C 198.69245 256 256 198.69245 256 128 C 256 57.307552 198.69245 -3.5527137e-14 128 0 z M 128 13 C 191.51275 13 243 64.487254 243 128 C 243 191.51275 191.51275 243 128 243 C 64.487253 243 13 191.51275 13 128 C 13 64.487254 64.487253 13 128 13 z "
+       transform="translate(0,796.36218)"
+       id="path2985" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="m 124,924.36218 c 0,2.20914 1.79086,4 4,4 2.20914,0 4,-1.79086 4,-4 l 0,-60 c 0,-2.20914 -1.79086,-4 -4,-4 -2.20914,0 -4,1.79086 -4,4 l 0,60 z"
+       id="path3005"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
