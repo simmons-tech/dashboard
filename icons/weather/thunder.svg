@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="512px"
+   height="512px"
+   viewBox="0 0 512 512"
+   enable-background="new 0 0 512 512"
+   xml:space="preserve"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="15.svg"><metadata
+   id="metadata76"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs74" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview72"
+   showgrid="false"
+   inkscape:zoom="0.4609375"
+   inkscape:cx="256"
+   inkscape:cy="256"
+   inkscape:window-x="0"
+   inkscape:window-y="24"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+
+<path
+   d="m 400,80 c -5.312,0 -10.562,0.375 -15.792,1.125 C 354.334,40.417 307.188,16 256,16 204.812,16 157.688,40.417 127.792,81.125 122.562,80.375 117.312,80 112,80 50.25,80 0,130.25 0,192 c 0,61.75 50.25,112 112,112 13.688,0 27.084,-2.5 39.709,-7.333 21.541,18.771 47.416,31.291 75.104,36.521 L 192,368 l 32,32 -32,96 96,-96 -32,-32 11,-32.999 c 34.458,-2.438 67.125,-15.543 93.291,-38.334 C 372.916,301.5 386.312,304 400,304 461.75,304 512,253.75 512,192 512,130.25 461.75,80 400,80 z m 0,192 c -17.125,0 -32.916,-5.5 -45.938,-14.667 -18.938,22.833 -45.562,38.625 -75.875,44.104 L 256,304 C 216.375,304 181.416,285.625 157.938,257.333 144.938,266.5 129.125,272 112,272 67.812,272 32,236.188 32,192 c 0,-44.188 35.812,-80 80,-80 10.812,0 21.062,2.208 30.438,6.083 C 163.667,76.667 206.291,48 256,48 305.709,48 348.334,76.667 369.541,118.083 378.938,114.208 389.209,112 400,112 c 44.188,0 80,35.812 80,80 0,44.188 -35.812,80 -80,80 z"
+   id="path70"
+   inkscape:connector-curvature="0"
+   style="fill:#1d1d1b" />
+</svg>

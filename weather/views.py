@@ -43,53 +43,56 @@ def getWeather(request):
     jsonout = json.dumps(weather)
     return HttpResponse(jsonout, mimetype="application/json")
 
-# def code2image(code):
-#     weather = { '0': 'no_icon.png',
-#                 '1': 'no_icon.png'
-#                 '2': 'no_icon.png',
-#                 '3': 'severe_thunderstorms.png',
-#                 '4': 'thunderstorms.png',
-#                 '5': 'mixed_rain_and_snow.png',
-#                 '6': 'mixed_rain_and_snow.png',
-#                 '7': 'mixed_rain_and_snow.png',
-#                 '8': 'freezing.png',
-#                 '9': 'drizzle.png',
-#                 '10': 'freezing.png',
-#                 '11': 'showers.png',
-#                 '12': 'showers.png',
-#                 '13': 'snow.png',
-#                 '14': 'mixed_rain_and_snow.png',
-#                 '15': 'blowing_snow.png',
-#                 '16': 'snow.png',
-#                 '17': 'hail.png',
-#                 '18': 'hail.png',
-#                 '19': 'dust.png',
-#                 '20': 'foggy.png',
-#                 '21': 'no_icon.png',
-#                 '22': 'smoky.png',
-#                 '23': 'no_icon.png',
-#                 '24': 'windy.png',
-#                 '25': 'no_icon.png',
-#                 '26': 'cloudy.png',
-#                 '27': 'mostly_cloudy_night.png',
-#                 '28': 'mostly_cloudy_day.png',
-#                 '29': 'partly_cloudy_night.png',
-#                 '30': 'partly_cloudy_day.png',
-#                 '31': 'clear_night.png',
-#                 '32': 'sunny.png',
-#                 '33': 'fair', (night)
-#                 '34': 'fair', (day)
-#                 '35': 'mixed', rain and hail
-#                 '36': 'hot.png',
-#                 '37': 'thunderstorms.png',
-#                 '38': 'thunderstorms.png',
-#                 '39': 'thunderstorms.png',
-#                 '40': 'scattered', showers
-#                 '41': 'heavy', snow
-#                 '42': 'scattered', snow showers
-#                 '43': 'heavy', snow
-#                 '44': 'partly', cloudy
-#                 '45': 'thundershowers',
-#                 '46': 'snow', showers
-#                 '47': 'isolated', thundershowers
-#                 '3200': 'not', available }
+def code2image(code):
+    weather = {
+		'0':'windy.png',
+		'1':'windy.png',
+		'2':'windy.png',
+		'3':'thunder.png',
+		'4':'thunder.png',
+		'5':'mixed.png',
+		'6':'mixed.png',
+		'7':'mixed.png',
+		'8':'mixed.png',
+		'9':'rain.png',
+		'10':'mixed.png',
+		'11':'rain.png',
+		'12':'rain.png',
+		'13':'snow.png',
+		'14':'snow.png',
+		'15':'snow.png',
+		'16':'snow.png',
+		'17':'mixed.png',
+		'18':'mixed.png',
+		'19':'foggy.png',
+		'20':'foggy.png',
+		'21':'foggy.png',
+		'22':'foggy.png',
+		'23':'windy.png',
+		'24':'windy.png',
+		'25':'cold.png',
+		'26':'cloudy.png',
+		'27':'cloudy.png',
+		'28':'cloudy.png',
+		'29':'patchy_night.png',
+		'30':'patchy.png',
+		'31':'clear_night.png',
+		'32':'sunny.png',
+		'33':'clear_night.png',
+		'34':'sunny.png',
+		'35':'mixed.png',
+		'36':'hot.png',
+		'37':'thunder.png',
+		'38':'thunder.png',
+		'39':'thunder.png',
+		'40':'rain.png',
+		'41':'snow.png',
+		'42':'snow.png',
+		'43':'snow.png',
+		'44':'patchy.png',
+		'45':'thunder.png',
+		'46':'snow.png',
+		'47':'thunder.png',
+		'3200':'no_icon.png'
+	}
+	return weather[ code ]

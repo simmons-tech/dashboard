@@ -28,3 +28,6 @@ pip-log.txt
 
 #MAC
 .DS_STORE
+
+#Temp files
+*~
