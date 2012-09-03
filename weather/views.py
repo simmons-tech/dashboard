@@ -95,4 +95,4 @@ def code2image(code):
 		'47':'thunder.png',
 		'3200':'no_icon.png'
 	}
-	return weather[ code ]
+    return weather[ code ]
