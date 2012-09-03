@@ -93,20 +93,39 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Widget Size Definitions */
 
+@base-unit: 200px;
 
+.1u {
+    height: @base-unit; 
+    width: @base-unit;
+}
 
+.2u {
+    height: @base-unit;
+    width: @base-unit * 2;
+}
 
+.3u {
+    height: @base-unit;
+    width: @base-unit * 3;
+}
 
+.4u {
+    height: @base-unit;
+    width: @base-unit * 4;
+}
 
+.5u {
+    height: @base-unit;
+    width: @base-unit * 5;
+}
 
-
-
-
-
-
-
-
+.6u {
+    height: @base-unit;
+    width: @base-unit * 6;
+}
 
 
 /* ==========================================================================
@@ -215,15 +234,17 @@ textarea {
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/* COMMENTED OUT, CAUSING ERROR WITH LIVERELOAD */
 
-@media only screen and (min-width: 35em) {
+/* @media only screen and (min-width: 35em) {
+
+}*/
     /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+/* @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
-}
+    
+} */
+/* Style adjustments for high resolution devices */
 
 /* ==========================================================================
    Print styles.
