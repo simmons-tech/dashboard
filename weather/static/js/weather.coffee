@@ -5,7 +5,7 @@ $ ->
                 tomorrow = data.tomorrow
 
                 # Current Weather
-                $('#current .temp').html(current.temp)
+                $('#current .temp').html("#{current.temp}&deg;F")
                 $('#current .description').html(current.description)
 
                 forecast = (data, id) ->

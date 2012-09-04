@@ -7,7 +7,7 @@
       current = data.current;
       today = data.today;
       tomorrow = data.tomorrow;
-      $('#current .temp').html(current.temp);
+      $('#current .temp').html("" + current.temp + "&deg;F");
       $('#current .description').html(current.description);
       forecast = function(data, id) {
         var key, param, value, _results;
