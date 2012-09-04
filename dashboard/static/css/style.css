@@ -1,0 +1,18 @@
+@font-face{font-family:"Open Sans Light";src:url("../fonts/OpenSans-Light.eot");src:local("☺"),url("../fonts/OpenSans-Light.woff") format("woff");}*{font-family:"Open Sans Light";color:#ffffff;}
+body{background:url('../img/bg.png');overflow:hidden;}
+h1,h2,h3,h4,h5,h6{display:inline;}
+#wrapper{position:fixed;width:1230px;height:410px;top:50%;left:50%;margin-top:-205px;margin-left:-615px;}
+.panel1{width:200px;height:200px;margin:2.5px;float:left;}
+.panel2{width:405px;height:200px;margin:2.5px;float:left;}
+.panel3{width:610px;height:200px;margin:2.5px;float:left;}
+.icon{position:relative;top:50%;margin-left:10px;margin-top:-75px;width:150px;height:150px;float:left;background:rgba(255, 255, 255, 0);}
+.widget-content2{position:relative;width:225px;top:10%;margin-left:auto;margin-top:10px;margin-right:10px;margin-bottom:10px;background:rgba(255, 255, 255, 0);text-align:left;vertical-align:middle;}.widget-content2 h1{font-size:80px;}
+.widget-content2 h2{font-size:26px;font-weight:bold;}
+.widget-content3{position:relative;width:430px;top:10%;margin-left:auto;margin-top:10px;margin-right:10px;margin-bottom:10px;background:rgba(255, 255, 255, 0);text-align:left;vertical-align:middle;}.widget-content3 h1{font-size:80px;}
+.widget-content3 h2{font-size:26px;font-weight:bold;}
+#time{background:#25aae2;}
+#weather{background:#0b9444;}
+#bus{background:#bf1e2e;}
+#stocks{background:#bf1e2e;}
+#events{background:#ecc32f;}
+#news{background:#25aae2;}
