@@ -1,56 +1,68 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css">
+      
+      <title>Dashboard</title>
+    </head>
 
-		<title>Dashboard</title>
-	</head>
-	<body>
-		<div id="wrapper">
-			<div class="panel2" id="time">
-				<div class="icon"></div>
-				<div class="widget-content2">
-					<h1>8:15</h1></br>
-					<h2>Tuesday, Sept 4</h2>
-				</div>
-			</div>
-			<div class="panel2" id="weather">
-				<div class="icon"></div>
-				<div class="widget-content2">
-					<h1>61°F</h1></br>
-					<h2>Thunderstorms</h2>
-				</div>
-			</div>
-			<div class="panel2" id="bus">
-				<div class="icon"></div>
-				<div class="widget-content2">
-					<h1>2 min</h1></br>
-					<h2>10 min 19 min</h2>
-				</div>
-			</div>
+    <body>
+      <div id="wrapper">
+	<div class="panel2" id="time">
+	  <div class="icon"></div>
+	  <div class="widget-content2">
+	    <h1>8:15</h1></br>
+	  <h2>Tuesday, Sept 4</h2>
+	</div>
+      </div>
+      <div class="panel2" id="weather">
+	<div class="icon"></div>
+	<div class="widget-content2">
+	  <h1>61°F</h1></br>
+	<h2>Thunderstorms</h2>
+      </div>
+    </div>
+    <div class="panel2" id="bus">
+      <div class="icon"></div>
+      <div class="widget-content2">
+	<h1>2 min</h1></br>
+      <h2>10 min 19 min</h2>
+    </div>
+  </div>
+  
+  <div class="panel1" id="stocks">
+    
+  </div>
+  <div class="panel3" id="events">
+    <div class="icon"></div>
+    <div class="widget-content3">
+      <h2>Exhibit: The Vanishing Glaciers of the Greater Himalaya Mountains</h2><br/>
+      <h2>10:00am - 4:00pm N51</h2>
+    </div>
+  </div>
+  <div class="panel2" id="news">
+    <div class="icon"></div>
+    <div class="widget-content2">
+      <h2>Songwriter Hal David Dies at 91</h2>
+    </div>
+  </div>
+  
 
-			</br>
-			<div class="panel1" id="stocks">
-				STOCKS</br>
-				( Coming Soon )
-			</div>
-			<div class="panel3" id="events">
-				<div class="icon"></div>
-				<div class="widget-content3">
-					<h2>Exhibit: The Vanishing Glaciers of the Greater Himalaya Mountains</h2></br>
-					<h2>10:00am - 4:00pm N51</h2>
-				</div>
-			</div>
-			<div class="panel2" id="news">
-				<div class="icon"></div>
-				<div class="widget-content2">
-					<h2>Songwriter Hal David Dies at 91</h2>
-				</div>
-			</div>
-		</div>
-	</body>
-</html>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+  <script src="{{ STATIC_URL }}js/plugins.js"></script>
+  <script src="{{ STATIC_URL }}js/main.js"></script>
+    
+  <!-- Widget related scripts -->
+  <script src="{{ STATIC_URL }}js/nextbus.js"></script>
+  <script src="{{ STATIC_URL }}js/weather.js"></script>
+  <script src="{{ STATIC_URL }}js/events.js"></script>
+  <!-- End widget related scripts -->
+    
+    </body>
+  </html>
