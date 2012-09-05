@@ -5,9 +5,8 @@
     return $.get('/events', function(events) {
       var addEvent, event, _i, _len, _results;
       addEvent = function(data) {
-        var template;
-        template = "<td> " + data.time + " </td><td> " + data.title + " </td>";
-        return $('#events tbody tr').append(template);
+        $('#events .title').html(data.title);
+        return $('#events .time').html(data.time);
       };
       _results = [];
       for (_i = 0, _len = events.length; _i < _len; _i++) {

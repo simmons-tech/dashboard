@@ -1,8 +1,8 @@
 $ ->
          $.get('/events', (events) ->
                 addEvent = (data) ->
-                        template = "<td> #{data.time} </td><td> #{data.title} </td>"
-                        $('#events tbody tr').append(template)
+                        $('#events .title').html(data.title)
+                        $('#events .time').html(data.time)
                         
                 for event in events
                         addEvent(event)
