@@ -2,19 +2,15 @@
 (function() {
 
   $(function() {
-    return $.get('/events', function(events) {
-      var addEvent, event, _i, _len, _results;
-      addEvent = function(data) {
-        $('#events .title').html(data.title);
-        return $('#events .time').html(data.time);
-      };
-      _results = [];
-      for (_i = 0, _len = events.length; _i < _len; _i++) {
-        event = events[_i];
-        _results.push(addEvent(event));
-      }
-      return _results;
-    });
+    var getEvent;
+    getEvent = function() {
+      $.get('/events', function(event) {
+        $('#events .title').html(event.title);
+        return $('#events .time').html(event.time);
+      });
+      return setTimeout(getEvent, 15000);
+    };
+    return getEvent();
   });
 
 }).call(this);

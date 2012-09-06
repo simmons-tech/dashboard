@@ -1,9 +1,11 @@
 $ ->
-         $.get('/events', (events) ->
-                addEvent = (data) ->
-                        $('#events .title').html(data.title)
-                        $('#events .time').html(data.time)
-                        
-                for event in events
-                        addEvent(event)
+        getEvent = ->
+                $.get('/events', (event) ->
+                        $('#events .title').html(event.title)
+                        $('#events .time').html(event.time)
                 )
+
+                setTimeout(getEvent, 15000)
+
+        getEvent()
+                

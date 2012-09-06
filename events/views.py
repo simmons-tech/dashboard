@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 import json
 import feedparser
+from random import choice
 
 def getEvents(request):
     # parsed events list
@@ -21,19 +22,24 @@ def getEvents(request):
         url = "http://events.mit.edu/rss"
         d = feedparser.parse(url)
 
+        print len(d.entries)
+
         for entry in d.entries:
             event = {'title': entry.title,
                      'description': entry.summary,
                      'time': formatEventsDate(entry.updated_parsed),}
 
-        events.append(event)
+            events.append(event)
+
+        print len(events)
 
     except:
         event = {'title': 'Unavailable',
                  'description': 'Unavailable',
                  'time': 'NA',}
         events.append(event)
+
+    random_event =  choice(events)
         
-        
-    jsonout = json.dumps(events, indent=4)
+    jsonout = json.dumps(random_event, indent=4)
     return HttpResponse(jsonout, mimetype="application/json")
