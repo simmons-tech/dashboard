@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 import json
 import feedparser
+from random import choice
 
 def getTopStories(request):
     # Chose BBC for now, but should include others in the future
@@ -14,6 +15,6 @@ def getTopStories(request):
                   'summary': entry.summary,}
         news.append(story)
 
-    jsonout = json.dumps(news)
+    jsonout = json.dumps(choice(news))
     
     return HttpResponse(jsonout, mimetype="application/json")
