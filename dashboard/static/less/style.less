@@ -9,7 +9,7 @@
 @block-size:		220px;
 @block-spacing:		5px;
 
-@icon-size:			150px;
+@icon-size:		150px;
 @widget-spacing:	10px;
 
 @font-face {
@@ -72,6 +72,10 @@ h1,h2,h3,h4,h5,h6 {
 	height:			@icon-size;
 	float:			left;
 	background:		@temp-color;
+	img {
+	    width: @icon-size;
+	    height: @icon-size;
+	}
 }
 
 .widget-content( @size ) {

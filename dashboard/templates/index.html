@@ -13,18 +13,21 @@
 
     <body>
       <div id="wrapper">
+
+	<!-- Clock Widget -->
 	<div class="panel2" id="time">
-	  <div class="icon"></div>
+	  <div class="icon"><img src="{{ STATIC_URL }}img/clock_hour.png"></div>
 	  <div class="widget-content2">
 	    <h1>8:15</h1></br>
 	  <h2>Tuesday, Sept 4</h2>
 	</div>
       </div>
+      <!-- End Clock Widget -->
 
       <!-- Weather Widget-->
       <div class="panel2" id="weather">
-	<div class="icon"></div>
-	<div id="current" class="widget-content2">
+	<div class="icon"><img src="/static/img/no_icon.png"></img></div>
+	<div class="widget-content2">
 	  <h1 class="temp">N/A</h1><br />
 	  <h2 class="description">Unavailable</h2>
       </div>
@@ -33,20 +36,22 @@
 
     <!-- Nextbus Widget -->
     <div class="panel2" id="nextbus">
-      <div class="icon"></div>
+      <div class="icon"><img src="{{ STATIC_URL }}img/bus.png"></img></div>
       <div class="widget-content2">
 	<h1 class="next">N/A</h1><br />
       <h2><span class="second">N/A</span> <span class="third">N/A</span></h2>
+      </div>
     </div>
-  </div>
     <!-- End Nextbus Widget-->
+    
+    <!-- Stock Widget -->
+    <div class="panel1" id="stocks">
+    </div>
+    <!-- End Stock Widget-->
   
-  <div class="panel1" id="stocks">    
-  </div>
-
-  <!-- Events Widget -->
+    <!-- Events Widget -->
   <div class="panel3" id="events">
-    <div class="icon"></div>
+    <div class="icon"><img src="{{ STATIC_URL }}img/events.png"></img></div>
     <div class="widget-content3">
       <h2 class="title">Unavailable</h2><br/>
       <h2 class="time">N/A</h2>
@@ -54,12 +59,14 @@
   </div>
   <!-- End Events Widget -->
 
+  <!-- News Widget -->
   <div class="panel2" id="news">
-    <div class="icon"></div>
+    <div class="icon"><img src="{{ STATIC_URL }}img/BBC.png"></img></div>
     <div class="widget-content2">
-      <h2>Songwriter Hal David Dies at 91</h2>
+      <h2 class="title">N/A</h2>
     </div>
   </div>
+  <!-- End News Widget -->
   
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -71,6 +78,8 @@
   <script src="{{ STATIC_URL }}js/nextbus.js"></script>
   <script src="{{ STATIC_URL }}js/weather.js"></script>
   <script src="{{ STATIC_URL }}js/events.js"></script>
+  <script src="{{ STATIC_URL }}js/clock.js"></script>
+  <script src="{{ STATIC_URL }}js/news.js"></script>
   <!-- End widget related scripts -->
     
     </body>

@@ -56,6 +56,10 @@ h6 {
   float: left;
   background: rgba(255, 255, 255, 0);
 }
+.icon img {
+  width: 150px;
+  height: 150px;
+}
 .widget-content2 {
   position: relative;
   width: 265px;

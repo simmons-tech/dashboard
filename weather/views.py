@@ -11,29 +11,29 @@ def getWeather(request):
         tmp_condition = forecast['condition']
         current = { 'temp': tmp_condition['temp'],
                     'description': tmp_condition['text'],
-                    'code': tmp_condition['code'], }
+                    'icon': code2image(tmp_condition['code']),}
 
         tmp_today = forecast['forecasts'][0]
         today = { 'high': tmp_today['high'],
                   'low': tmp_today['low'],
                   'description': tmp_today['text'],
-                  'code': tmp_today['code']}
+                  'icon': code2image(tmp_today['code']),}
 
         tmp_tomorrow = forecast['forecasts'][1]
         tomorrow = { 'high': tmp_tomorrow['high'],
                      'low': tmp_tomorrow['low'],
                      'description': tmp_tomorrow['text'],
-                     'code': tmp_tomorrow['code']}
+                     'icon': code2image(tmp_tomorrow['code']),}
 
     except:
         current = {'temp': 'NA',
                    'description': 'NA',
-                   'code': 'NA',}
+                   'icon': 'NA',}
 
         today = tomorrow = {'high': 'NA',
                             'low': 'NA',
                             'description': 'NA',
-                            'code': 'NA',}
+                            'icon': 'NA',}
     
     weather = { 'title': 'Yahoo! Weather',
                 'current': current,
@@ -95,4 +95,8 @@ def code2image(code):
 		'47':'thunder.png',
 		'3200':'no_icon.png'
 	}
-    return weather[ code ]
+
+    # path that browser will use to find weather images
+    image_path = "/static/img/"
+    
+    return "{}{}".format(image_path, weather[ code ])
