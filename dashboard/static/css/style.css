@@ -21,29 +21,29 @@ h6 {
 }
 #wrapper {
   position: fixed;
-  width: 1350px;
-  height: 450px;
+  width: 1380px;
+  height: 460px;
   top: 50%;
   left: 50%;
-  margin-top: -225px;
-  margin-left: -675px;
+  margin-top: -230px;
+  margin-left: -690px;
 }
 .panel1 {
   width: 220px;
   height: 220px;
-  margin: 2.5px;
+  margin: 5px;
   float: left;
 }
 .panel2 {
-  width: 445px;
+  width: 450px;
   height: 220px;
-  margin: 2.5px;
+  margin: 5px;
   float: left;
 }
 .panel3 {
-  width: 670px;
+  width: 680px;
   height: 220px;
-  margin: 2.5px;
+  margin: 5px;
   float: left;
 }
 .icon {
@@ -54,7 +54,6 @@ h6 {
   width: 150px;
   height: 150px;
   float: left;
-  background: rgba(255, 255, 255, 0);
 }
 .icon img {
   width: 150px;
@@ -62,13 +61,12 @@ h6 {
 }
 .widget-content2 {
   position: relative;
-  width: 265px;
+  width: 270px;
   top: 10%;
   margin-left: auto;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0);
   text-align: left;
   vertical-align: middle;
 }
@@ -81,13 +79,12 @@ h6 {
 }
 .widget-content3 {
   position: relative;
-  width: 490px;
+  width: 500px;
   top: 10%;
   margin-left: auto;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0);
   text-align: left;
   vertical-align: middle;
 }
