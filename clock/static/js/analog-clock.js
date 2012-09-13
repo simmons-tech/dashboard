@@ -19,11 +19,6 @@ function startClock() {
 	}
 }
 
-function loadingComplete(e) {
-	// When the image has loaded begin the loop
-	setInterval(loop, 25);
-}
-
 function drawRotatedImage(image, angle) {
 	// Each loop we rotate the image
 	// Grab the context
