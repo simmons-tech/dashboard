@@ -2,9 +2,6 @@ var surface;
 var hour_hand;
 var minute_hand;
 
-var hour = 0;
-var minute = 0;
-
 var icon_size = 150.0; // TODO Load Dynamically 
 
 function startClock() {
@@ -14,11 +11,11 @@ function startClock() {
 	if (surface.getContext) {
 		hour_hand = new Image();
 		hour_hand.onload = loadingComplete;
-		hour_hand.src = "static/img/clock_hour.svg";
+		hour_hand.src = "static/img/clock_hour.svg"; // TODO Better Reference
 
 		minute_hand = new Image();
 		minute_hand.onload = loadingComplete;
-		minute_hand.src = "static/img/clock_minute.svg";
+		minute_hand.src = "static/img/clock_minute.svg"; // TODO Better Reference
 	}
 }
 
@@ -62,15 +59,6 @@ function drawTime( hour, minute ) {
 	drawRotatedImage( hour_hand, hour * 360 / 12 );
 	drawRotatedImage( minute_hand, minute * 360 / 60 );
 
-}
-
-function loop() {
-	drawTime( hour, minute );
-	minute += 0.5
-	if( minute >= 60 ) {
-		minute -= 60;
-		hour ++;
-	}
 }
 
 function degreesToRadians(d) {
