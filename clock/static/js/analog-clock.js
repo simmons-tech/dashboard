@@ -10,12 +10,10 @@ function startClock() {
 
 	if (surface.getContext) {
 		hour_hand = new Image();
-		hour_hand.onload = loadingComplete;
-		hour_hand.src = "static/img/clock_hour.svg"; // TODO Better Reference
+		hour_hand.src = "static/img/clock_hour.png"; // TODO Better Reference
 
 		minute_hand = new Image();
-		minute_hand.onload = loadingComplete;
-		minute_hand.src = "static/img/clock_minute.svg"; // TODO Better Reference
+		minute_hand.src = "static/img/clock_minute.png"; // TODO Better Reference
 	}
 }
 
@@ -43,7 +41,7 @@ function drawRotatedImage(image, angle) {
 function clearCanvas() {
 	var surfaceContext = surface.getContext('2d');
 	// Clear the canvas to White
-	surfaceContext.fillStyle = "rgb(0,0,255)"; // TODO: Make this transparent.
+	surfaceContext.fillStyle = "rgb(37,170,226)"; // TODO: Make this transparent.
 	surfaceContext.fillRect(0, 0, surface.width, surface.height);
 }
 

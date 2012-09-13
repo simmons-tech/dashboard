@@ -23,8 +23,10 @@
       months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
       month = months[month];
       $('#time h2').html("" + dow + ", " + month + " " + dom);
+      drawTime(h, m);
       return setTimeout(getTime, 5000);
     };
+    startClock();
     return getTime();
   });
 

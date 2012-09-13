@@ -16,7 +16,10 @@
 
 	<!-- Clock Widget -->
 	<div class="panel2" id="time">
-	  <div class="icon"><img src="{{ STATIC_URL }}img/clock_hour.png"></div>
+	  <div class="icon">
+	    <canvas id="analog-clock" width="150px" height="150px">
+	      <img src="{{ STATIC_URL }}img/no_icon.png"></div>
+	    </canvas>
 	  <div class="widget-content2">
 	    <h1>N/A</h1></br>
 	  <h2>N/A</h2>
@@ -78,6 +81,7 @@
   <script src="{{ STATIC_URL }}js/nextbus.js"></script>
   <script src="{{ STATIC_URL }}js/weather.js"></script>
   <script src="{{ STATIC_URL }}js/events.js"></script>
+  <script src="{{ STATIC_URL }}js/analog-clock.js"></script>
   <script src="{{ STATIC_URL }}js/clock.js"></script>
   <script src="{{ STATIC_URL }}js/news.js"></script>
   <!-- End widget related scripts -->

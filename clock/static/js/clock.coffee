@@ -31,7 +31,13 @@ $ ->
 
                 $('#time h2').html("#{dow}, #{month} #{dom}")
 
+                drawTime(h, m)
+
                 setTimeout(getTime, 5000)
 
+        startClock()
         getTime()
+        
+
+        
         
