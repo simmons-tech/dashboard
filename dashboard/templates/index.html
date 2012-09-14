@@ -11,10 +11,11 @@
 				<img src="{{ STATIC_URL }}img/title.png"></img>
 			</div>
 			<div class="slides">
-				<span id="presentation-counter"></span>
+
+				<!-- For some reason, removing the following line breaks SlideShow.prev(). Dunno why yet. -->
+				<span></span>
 
 				<div class="slide" id="landing-slide">
-					<div id="left-init-key" class="key"></div>
 
 					<!-- Clock Widget -->
 					<div class="panel2" id="time">
@@ -33,7 +34,7 @@
 					<!-- Weather Widget-->
 					<div class="panel2" id="weather">
 						<div class="icon">
-							<img src="/{{ STATIC_URL }}img/no_icon.png"></img>
+							<img src="{{ STATIC_URL }}img/no_icon.png"></img>
 						</div>
 						<div class="widget-content2">
 							<h1 class="temp">N/A</h1><br />

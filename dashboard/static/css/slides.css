@@ -66,6 +66,17 @@
   position: absolute;
 }
 
+.slide.distant-slide {
+  z-index: 8;
+  visibility: visible;
+  display: block;
+  opacity: 0;
+  -webkit-transform:	translateX(-3200px);
+  -moz-transform:		translateX(-3200px);
+  -o-transform:			translateX(-3200px);
+  -webkit-transform:	translateX(-3200px);
+}
+
 .slide.far-past {
   z-index: 8;
   visibility: visible;
