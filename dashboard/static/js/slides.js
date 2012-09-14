@@ -97,11 +97,8 @@
 	//
 	// Slide class
 	//
-	var Slide = function(node, idx) {
+	var Slide = function(node) {
 		this._node = node;
-		if (idx >= 0) {
-			this._count = idx + 1;
-		}
 		if (this._node) {
 			addClass(this._node, 'slide distant-slide');
 		}
@@ -109,8 +106,6 @@
 
 	Slide.prototype = {
 		_node: null,
-		_count: 0,
-		_buildList: [],
 		_currentState: '',
 		_states: [ 'distant-slide', 'far-past',
 							 'past', 'current', 'future',
@@ -123,33 +118,18 @@
 			addClass(this._node, state);
 			this._currentState = state;
 		},
-	 
-		buildNext: function() {
-			if (!this._buildList.length) {
-				return false;
-			}
-			removeClass(this._buildList.shift(), 'to-build');
-			return true;
-		},
+
 	};
 
 	//
 	// SlideShow class
 	//
 	var SlideShow = function(slides) {
-		this._slides = (slides || []).map(function(el, idx) {
-			return new Slide(el, idx);
+		this._slides = (slides || []).map(function(el) {
+			return new Slide(el);
 		});
-		var h = window.location.hash;
-		try {
-			this.current = h;
-		} catch (e) { /* squeltch */ }
-		this.current = (!this.current) ? "landing-slide" : this.current.replace('#', '');
 
-		// If we've got an invalid URL, just go to the home screen.
-		if (!query('#' + this.current)) {
-			this.current = "landing-slide";
-		}
+		this.current = "landing-slide";
 
 		var _t = this;
 		document.addEventListener('keydown', function(e) { _t.handleKeys(e); }, false);
@@ -160,16 +140,16 @@
 	SlideShow.prototype = {
 		_slides: [],
 		_getCurrentIndex: function() {
-			var me = this;
+			var _t = this;
 			var slideCount = null;
 			queryAll('.slide').forEach(function(slide, i) {
-				if (slide.id == me.current) {
+				if (slide.id == _t.current) {
 					slideCount = i;
 				}
 			});
 			return slideCount + 1;
 		},
-		_update: function(targetId, dontPush) {
+		_update: function(targetId) {
 			// in order to delay the time where the counter shows the slide number we check if
 			// the slides are already loaded (so we show the loading... instead)
 			// the technique to test visibility is taken from here
@@ -191,13 +171,6 @@
 				}
 			}
 			
-			if (history.pushState) {
-				if (!dontPush) {
-					history.pushState(this.current, 'Slide ' + this.current, '#' + this.current);
-				}
-			} else {
-				window.location.hash = this.current;
-			}
 			for (var x = currentIndex - 4; x < currentIndex + 3; x++) {
 				if (this._slides[ x ]) {
 					this._slides[ x ].setState(x + 4 - currentIndex);
@@ -207,15 +180,11 @@
 
 		current: 0,
 		next: function() {
-			if (!this._slides[this._getCurrentIndex() - 1].buildNext()) {
-				var next = query('#' + this.current + ' + .slide');
-				//this.current = (next) ? next.id : this.current;
-				this._update((next) ? next.id : this.current);
-			}
+			var next = query('#' + this.current + ' + .slide');
+			this._update((next) ? next.id : this.current);
 		},
 		prev: function() {
 			var prev = query('.slide:nth-child(' + (this._getCurrentIndex()) + ')');
-			//this.current = (prev) ? prev.id : this.current;
 			this._update((prev) ? prev.id : this.current);
 		},
 
