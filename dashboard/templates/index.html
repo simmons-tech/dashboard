@@ -7,147 +7,97 @@
 	</head>
 	<body>
 		<div id="flex-container">
-			<div class="slides">
-			Page <span id="presentation-counter">1</span> of 2
-
-			<div class="slide" id="landing-slide">
-				<div id="left-init-key" class="key"></div>
-
-				<!-- Clock Widget -->
-				<div class="panel2" id="time">
-					<div class="icon">
-						<canvas id="analog-clock" width="150px" height="150px">
-							<img src="{{ STATIC_URL }}img/no_icon.png"></img>
-						</canvas>
-					</div>
-					<div class="widget-content2">
-						<h1>N/A</h1></br>
-						<h2>N/A</h2>
-					</div>
-				</div>
-				<!-- End Clock Widget -->
-
-				<!-- Weather Widget-->
-				<div class="panel2" id="weather">
-					<div class="icon">
-						<img src="/{{ STATIC_URL }}img/no_icon.png"></img>
-					</div>
-					<div class="widget-content2">
-						<h1 class="temp">N/A</h1><br />
-						<h2 class="description">Unavailable</h2>
-					</div>
-				</div>
-				<!-- End Weather Widget-->
-
-				<!-- Nextbus Widget -->
-				<div class="panel2" id="nextbus">
-					<div class="icon">
-						<img src="{{ STATIC_URL }}img/bus.png"></img>
-					</div>
-					<div class="widget-content2">
-						<h1 class="next">N/A</h1><br />
-						<h2><span class="second">N/A</span> <span class="third">N/A</span></h2>
-					</div>
-				</div>
-				<!-- End Nextbus Widget-->
-
-				<!-- Stock Widget -->
-				<div class="panel1" id="stocks">
-				</div>
-				<!-- End Stock Widget-->
-
-				<!-- Events Widget -->
-				<div class="panel3" id="events">
-					<div class="icon">
-						<img src="{{ STATIC_URL }}img/events.png"></img>
-					</div>
-					<div class="widget-content3">
-						<h2 class="title">Unavailable</h2><br/>
-						<h2 class="time">N/A</h2>
-					</div>
-				</div>
-				<!-- End Events Widget -->
-
-				<!-- News Widget -->
-				<div class="panel2" id="news">
-					<div class="icon">
-						<img src="{{ STATIC_URL }}img/BBC.png"></img>
-					</div>
-					<div class="widget-content2">
-						<h2 class="title">N/A</h2>
-					</div>
-				</div>
-				<!-- End News Widget -->
-
+			<div id="title">
+				<img src="{{ STATIC_URL }}img/title.png"></img>
 			</div>
+			<div class="slides">
+				<span id="presentation-counter"></span>
 
-			<div class="slide" id="content-1">
+				<div class="slide" id="landing-slide">
+					<div id="left-init-key" class="key"></div>
 
-				<!-- Clock Widget -->
-				<div class="panel2" id="time">
-					<div class="icon">
-						<canvas id="analog-clock" width="150px" height="150px">
-							<img src="{{ STATIC_URL }}img/no_icon.png"></img>
-						</canvas>
+					<!-- Clock Widget -->
+					<div class="panel2" id="time">
+						<div class="icon">
+							<canvas id="analog-clock" width="150px" height="150px">
+								<img src="{{ STATIC_URL }}img/no_icon.png"></img>
+							</canvas>
+						</div>
+						<div class="widget-content2">
+							<h1>N/A</h1></br>
+							<h2>N/A</h2>
+						</div>
 					</div>
-					<div class="widget-content2">
-						<h1>N/A</h1></br>
-						<h2>N/A</h2>
+					<!-- End Clock Widget -->
+
+					<!-- Weather Widget-->
+					<div class="panel2" id="weather">
+						<div class="icon">
+							<img src="/{{ STATIC_URL }}img/no_icon.png"></img>
+						</div>
+						<div class="widget-content2">
+							<h1 class="temp">N/A</h1><br />
+							<h2 class="description">Unavailable</h2>
+						</div>
 					</div>
+					<!-- End Weather Widget-->
+
+					<!-- Nextbus Widget -->
+					<div class="panel2" id="nextbus">
+						<div class="icon">
+							<img src="{{ STATIC_URL }}img/bus.png"></img>
+						</div>
+						<div class="widget-content2">
+							<h1 class="next">N/A</h1><br />
+							<h2><span class="second">N/A</span> <span class="third">N/A</span></h2>
+						</div>
+					</div>
+					<!-- End Nextbus Widget-->
+
+					<!-- Events Widget -->
+					<div class="panel3" id="events">
+						<div class="icon">
+							<img src="{{ STATIC_URL }}img/events.png"></img>
+						</div>
+						<div class="widget-content3">
+							<h2 class="title">Unavailable</h2><br/>
+							<h2 class="time">N/A</h2>
+						</div>
+					</div>
+					<!-- End Events Widget -->
+
+					<!-- News Widget -->
+					<div class="panel3" id="news">
+						<div class="icon">
+							<img src="{{ STATIC_URL }}img/BBC.png"></img>
+						</div>
+						<div class="widget-content3">
+							<h2 class="title">N/A</h2>
+						</div>
+					</div>
+					<!-- End News Widget -->
+
 				</div>
-				<!-- End Clock Widget -->
 
-				<!-- Weather Widget-->
-				<div class="panel2" id="weather">
-					<div class="icon">
-						<img src="/{{ STATIC_URL }}img/no_icon.png"></img>
-					</div>
-					<div class="widget-content2">
-						<h1 class="temp">N/A</h1><br />
-						<h2 class="description">Unavailable</h2>
-					</div>
+				<div class="slide" id="res-event">
+					<img src="{{ STATIC_URL }}img/Glimpses_of_INDIA.jpg"></img>
 				</div>
-				<!-- End Weather Widget-->
 
-				<!-- Nextbus Widget -->
-				<div class="panel2" id="nextbus">
-					<div class="icon">
-						<img src="{{ STATIC_URL }}img/bus.png"></img>
-					</div>
-					<div class="widget-content2">
-						<h1 class="next">N/A</h1><br />
-						<h2><span class="second">N/A</span> <span class="third">N/A</span></h2>
-					</div>
+				<div class="slide" id="res-event2">
+					<img src="{{ STATIC_URL }}img/Glimpses_of_INDIA.jpg"></img>
 				</div>
-				<!-- End Nextbus Widget-->
 
-				<!-- Stock Widget -->
-				<div class="panel1" id="stocks">
+				<div class="slide" id="res-event3">
+					<img src="{{ STATIC_URL }}img/Glimpses_of_INDIA.jpg"></img>
 				</div>
-				<!-- End Stock Widget-->
 
-				<!-- Events Widget -->
-				<div class="panel3" id="events">
-					<div class="icon">
-						<img src="{{ STATIC_URL }}img/events.png"></img>
-					</div>
-					<div class="widget-content3">
-						<h2 class="title">Unavailable</h2><br/>
-						<h2 class="time">N/A</h2>
-					</div>
+				<div class="slide" id="res-event4">
+					<img src="{{ STATIC_URL }}img/Glimpses_of_INDIA.jpg"></img>
 				</div>
-				<!-- End Events Widget -->
 
-				<!-- News Widget -->
-				<div class="panel2" id="news">
-					<div class="icon">
-						<img src="{{ STATIC_URL }}img/BBC.png"></img>
-					</div>
-					<div class="widget-content2">
-						<h2 class="title">N/A</h2>
-					</div>
+				<div class="slide" id="res-event5">
+					<img src="{{ STATIC_URL }}img/Glimpses_of_INDIA.jpg"></img>
 				</div>
-				<!-- End News Widget -->
 
 			</div>
 

@@ -361,7 +361,7 @@
       var docElem = document.documentElement;
       var elem = document.elementFromPoint( docElem.clientWidth / 2, docElem.clientHeight / 2);
       if (elem && elem.className != 'slides') {
-        this._presentationCounter.textContent = currentIndex;
+        //this._presentationCounter.textContent = currentIndex;
         if (this._menuCounter) {
           this._menuCounter.textContent = currentIndex;          
         }
@@ -401,38 +401,6 @@
       this._update(slideId, dontPush);
     },
 
-    showNotes: function() {
-      if (disableNotes) {
-        return;
-      }
-      if (this._speakerNote) {
-        this._speakerNote.style.display = 'block';
-        this._speakerNote.classList.toggle('invisible');
-      }
-    },
-    switch3D: function() {
-      toggleClass(document.body, 'three-d');
-    },
-    toggleHightlight: function() {
-      sessionStorage['highlightOn'] = true;
-    },
-    changeTheme: function() {
-      var sheetIndex = 0;
-      while (this._themes[sheetIndex].disabled) {
-        sheetIndex++;
-      }
-      this._themes[sheetIndex].disabled = true;
-      var nextSheet = this._themes[(sheetIndex + 1) % this._themes.length];
-      nextSheet.disabled = false;
-      sessionStorage['theme'] = nextSheet.getAttribute('href').split('/').pop();
-    },
-    toggleHelp: function() {
-      this._help.style.display = 'block';
-      this._help.classList.toggle('invisible');
-    },
-    viewSource: function() {
-      window.open("view-source:" + window.location.href);
-    },
     handleKeys: function(e) {
       if (/^(input|textarea)$/i.test(e.target.nodeName) || e.target.isContentEditable) {
         return;
@@ -441,59 +409,9 @@
         case 37:  // left arrow
           this.prev(); break;
         case 39:  // right arrow
-        case 32:  // space
           this.next(); break;
-        case 48:  // 0
-          this.toggleHelp(); break;
-        case 51:  // 3
-          this.switch3D(); break;
-        case 72:  // H
-          this.toggleHightlight(); break;
-        case 78:  // N
-          this.showNotes(); break;
-        case 83:  // S
-          this.viewSource(); break;
-        case 84:  // T
-          this.changeTheme(); break;
       }
     },
-    _touchStartX: 0,
-    handleTouchStart: function(e) {
-      this._touchStartX = e.touches[0].pageX;
-    },
-    handleTouchEnd: function(e) {
-      var delta = this._touchStartX - e.changedTouches[0].pageX;
-      var SWIPE_SIZE = 150;
-      if (delta > SWIPE_SIZE) {
-        this.next();
-      } else if (delta< -SWIPE_SIZE) {
-        this.prev();
-      }
-    },
-    onNavClick: function(e) {
-      if (e.target.id == "nav-prev") {
-        this.prev();
-      } else if (e.target.id = "nav-next") {
-        this.next();
-      }
-    },
-    onCommandClick: function(e) {
-      var n = e.target.getAttribute('data-command');
-      switch(n) {
-      case 'toc':
-        this._update("table-of-contents"); break;
-      case 'resources':
-        break;
-      case 'notes':
-        this.showNotes(); break;
-      case 'source':
-        this.viewSource(); break;
-      case 'help':
-        this.toggleHelp(); break;
-      default:
-        return;
-      }
-    }
   };
 
   // disable style theme stylesheets

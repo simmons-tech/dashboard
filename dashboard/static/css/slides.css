@@ -52,34 +52,70 @@
   position: absolute;
 }
 
-.slide.past {
+.slide img {
+  max-width: 1380px;
+  max-height: 460px;
+  margin:      5px;
+}
+
+#title {
+  top: 50%;
+  left: 50%;
+  margin-top: -340px;
+  margin-left: -685px;
+  position: absolute;
+}
+
+.slide.far-past {
   z-index: 8;
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translateZ(-1200px) rotateY(-90deg) translateZ(1200px);
-  -moz-transform: translateZ(-1200px) rotateY(-90deg) translateZ(1200px);
-  -o-transform: translateZ(-1200px) rotateY(-90deg) translateZ(1200px);
-  transform: translateZ(-1200px) rotateY(-90deg) translateZ(1200px);
+  -webkit-transform:	translateX(-3200px);
+  -moz-transform:		translateX(-3200px);
+  -o-transform:			translateX(-3200px);
+  -webkit-transform:	translateX(-3200px);
+}
+
+.slide.past {
+  z-index: 7;
+  visibility: visible;
+  display: block;
+  opacity: 0;
+  -webkit-transform:	translateX(-1600px);
+  -moz-transform:		translateX(-1600px);
+  -o-transform:			translateX(-1600px);
+  -webkit-transform:	translateX(-1600px);
 }
 .slide.current {
   z-index: 9;
   visibility: visible;
   display: block;
   opacity: 1;
-  -webkit-transform: translateZ(-1200px) rotateY(0deg) translateZ(1200px);
-  -moz-transform: translateZ(-1200px) rotateY(0deg) translateZ(1200px);
-  -o-transform: translateZ(-1200px) rotateY(0deg) translateZ(1200px);
-  transform: translateZ(-1200px) rotateY(0deg) translateZ(1200px);
+  -webkit-transform:	translateX(0px);
+  -moz-transform:		translateX(0px);
+  -o-transform:			translateX(0px);
+  -webkit-transform:	translateX(0px);
 }
 .slide.future {
   z-index: 8;
   visibility: visible;
   display: block;
+  opacity: 1;
+  -webkit-transform:	translateX(1600px);
+  -moz-transform:		translateX(1600px);
+  -o-transform:			translateX(1600px);
+  -webkit-transform:	translateX(1600px);
+}
+
+.slide.far-future {
+  z-index: 7;
+  visibility: visible;
+  display: block;
   opacity: 0;
-  -webkit-transform: translateZ(-1200px) rotateY(90deg) translateZ(1200px);
-  -moz-transform: translateZ(-1200px) rotateY(90deg) translateZ(1200px);
-  -o-transform: translateZ(-1200px) rotateY(90deg) translateZ(1200px);
-  transform: translateZ(-1200px) rotateY(90deg) translateZ(1200px);
+  -webkit-transform:	translateX(3200px);
+  -moz-transform:		translateX(3200px);
+  -o-transform:			translateX(3200px);
+  -webkit-transform:	translateX(3200px);
 }
 
