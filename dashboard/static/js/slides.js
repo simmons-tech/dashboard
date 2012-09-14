@@ -1,4 +1,3 @@
-(function() {
 	var doc = document;
 
 	var ctr = 0;
@@ -200,4 +199,3 @@
 
 	var slideshow = new SlideShow(queryAll('.slide'));
 
-})();
