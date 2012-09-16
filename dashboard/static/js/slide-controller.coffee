@@ -2,7 +2,7 @@ $ ->
         next = (show) ->
                 show.next()
 
-                setTimeout(next, 5000, slideshow)
+                setTimeout(next, 15000, slideshow)
 
         slideshow = new SlideShow(queryAll('.slide'))
         next(slideshow)

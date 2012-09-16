@@ -84,38 +84,20 @@
 		}
 	};
 
-	var toggleClass = function(node, classStr) {
-		var cls = ' ' + node.className + ' ';
-		if (cls.indexOf(' ' + trim(classStr) + ' ') >= 0) {
-			removeClass(node, classStr);
-		} else {
-			addClass(node, classStr);
-		}
-	};
-
 	//
 	// Slide class
 	//
-	var Slide = function(node) {
-		this._node = node;
-		if (this._node) {
-			addClass(this._node, 'slide distant-slide');
-		}
+	var Slide = function(name) {
+		this._name = name;
+		addClass(this._name, 'slide waiting');
 	};
 
 	Slide.prototype = {
-		_node: null,
-		_currentState: '',
-		_states: [ 'distant-slide', 'far-past',
-							 'past', 'current', 'future',
-							 'far-future', 'distant-slide' ],
+		_name: null,
+		_states: [ 'previous', 'current', 'next', 'waiting' ],
 		setState: function(state) {
-			if (typeof state != 'string') {
-				state = this._states[state];
-			}
-			removeClass(this._node, this._states);
-			addClass(this._node, state);
-			this._currentState = state;
+			removeClass(this._name, this._states);
+			addClass(this._name, state);
 		},
 
 	};
@@ -124,89 +106,35 @@
 	// SlideShow class
 	//
 	var SlideShow = function(slides) {
-		this._slides = (slides || []).map(function(el) {
+		this.slides = (slides || []).map(function(el) {
 			return new Slide(el);
 		});
-
-		this.current = "landing-slide";
 
 		var _t = this;
 		document.addEventListener('keydown', function(e) { _t.handleKeys(e); }, false);
 	
-		this._update();
+		this.update();
 	};
 
 	SlideShow.prototype = {
-		_slides: [],
-		_getCurrentIndex: function() {
-			var _t = this;
-			var slideCount = null;
-			queryAll('.slide').forEach(function(slide, i) {
-				if (slide.id == _t.current) {
-					slideCount = i;
-				}
-			});
-			return slideCount + 1;
-		},
-		_update: function(targetId) {
-			// in order to delay the time where the counter shows the slide number we check if
-			// the slides are already loaded (so we show the loading... instead)
-			// the technique to test visibility is taken from here
-			// http://stackoverflow.com/questions/704758/how-to-check-if-an-element-is-really-visible-with-javascript
-			var currentIndex = this._getCurrentIndex();
+		slides: [],
+		update: function() {
 
-			if (targetId) {
-				var savedIndex = currentIndex;
-				this.current = targetId;
-				currentIndex = this._getCurrentIndex();
-				if( Math.abs(savedIndex - currentIndex) > 1 ) {
-					// if we're jumping more than one slide for some reason,
-					// we need to clean up so that slides won't persist.
-					for (var x = savedIndex - 4; x < savedIndex + 3; x++) {
-						if (this._slides[x]) {
-							this._slides[x].setState( 'distant-slide' );
-						}
-					}
-				}
+			for( var i = 0; i < this.slides.length; i++) {
+				this.slides[ i ].setState('waiting')
 			}
 
-		    var very_distant_past = currentIndex - 3;
-		    var distant_past = currentIndex - 2;
-		    var past = currentIndex - 1;
-		    var current = currentIndex;
-		    var future = currentIndex + 1;
-		    var distant_future = currentIndex + 2;
-		    var very_distant_future = currentIndex + 3;
-		    
-		    var _t = this;
-		    
-		    if(this._slides[very_distant_past % _t._slides.length]){this._slides[very_distant_past % _t._slides.length].setState('distant-slide');}
-		    if(this._slides[very_distant_future % _t._slides.length]){this._slides[very_distant_future % _t._slides.length].setState('distant-slide');}
-		    if(this._slides[distant_past % _t._slides.length]){this._slides[distant_past % _t._slides.length].setState('far-past');}
-		    if(this._slides[distant_future % _t._slides.length]){this._slides[distant_future % _t._slides.length].setState('far-future');}
-		    if(this._slides[past % _t._slides.length]){this._slides[past % _t._slides.length].setState('past');}
-		    if(this._slides[future % _t._slides.length]){this._slides[future % _t._slides.length].setState('future');}
-		    if(this._slides[current % _t._slides.length]){this._slides[current % _t._slides.length].setState('current');}
-
-		    
-			// for (var x = currentIndex - 4; x < currentIndex + 3; x++) {
-
-			    
-			//     var _t = this;
-			//     if (this._slides[ x % _t._slides.length ]) {
-			// 		this._slides[ x % _t._slides.length ].setState(x + 4 - currentIndex);
-			// 	}
-			// }
+			this.slides[ this.slides.length - 1 ].setState('previous')
+			this.slides[ 1 ].setState('next')
+			this.slides[ 0 ].setState('current')
 		},
-
-		current: 0,
 		next: function() {
-			var next = query('#' + this.current + ' + .slide');
-			this._update((next) ? next.id : "landing-slide");
+			this.slides.push( this.slides.shift() );
+			this.update();
 		},
 		prev: function() {
-			var prev = query('.slide:nth-child(' + (this._getCurrentIndex()) + ')');
-			this._update((prev) ? prev.id : this.current);
+			this.slides.unshift( this.slides.pop() );
+			this.update();
 		},
 
 		handleKeys: function(e) {
@@ -218,6 +146,4 @@
 			}
 		},
 	};
-
-	var slideshow = new SlideShow(queryAll('.slide'));
 
