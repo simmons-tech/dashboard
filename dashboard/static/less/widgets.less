@@ -1,0 +1,57 @@
+@import "color.less";
+@import "size.less";
+
+.widget( @color ) {
+	background:			@color;
+}
+
+.icon {
+	position:			relative;
+	top:				50%;
+	margin-left:		@widget-spacing;
+	margin-top:			-@icon-size / 2;
+	width:				@icon-size;
+	height:				@icon-size;
+	float:				left;
+	img {
+	    width: 			@icon-size;
+	    height: 		@icon-size;
+	}
+}
+
+.widget-content( @size ) {
+	position:			relative;
+	width: 				@block-size * @size + @block-spacing * ( @size - 1 ) - @icon-size - @widget-spacing * 3;
+	// height: 			@block-size - @widget-spacing * 2;
+	top:				10%;	
+	margin-left:		auto;
+	margin-top:			@widget-spacing;
+	margin-right:		@widget-spacing;
+	margin-bottom:		@widget-spacing;
+	text-align:			left;
+	vertical-align: 	middle;
+
+	h1 {
+		font-size:		80px;
+	}
+	h2 {
+		font-size:		26px;
+		font-weight:	bold;
+	}
+}
+
+.widget-content2 { .widget-content( 2 ); }
+
+.widget-content3 { .widget-content( 3 ); }
+
+#time		{ .widget( @blue ); }
+
+#weather	{ .widget( @green ); }
+
+#nextbus 	{ .widget( @red ); }
+
+#stocks		{ .widget( @red ); }
+
+#events		{ .widget( @yellow ); }
+
+#news		{ .widget( @blue ); }
