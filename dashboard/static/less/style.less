@@ -1,26 +1,8 @@
-@white:				#ffffff;
-@blue:				#25aae2;
-@red:				#bf1e2e;
-@green:				#0b9444;
-@yellow:			#ecc32f;
+@import "color.less";
+@import "size.less";
+@import "font.less";
 
-@block-size:		220px;
-@block-spacing:		10px;
-
-@icon-size:		150px;
-@widget-spacing:	10px;
-
-@font-face {
-  font-family: "Open Sans Light";
-  src: url("../fonts/OpenSans-Light.eot");
-  src: local("☺"),
-    url("../fonts/OpenSans-Light.woff") format("woff")
-}
-
-* {
-  font-family:		"Open Sans Light";
-  color:			@white;
-}
+@import "slides.less";
 
 body {
 	background:		url('../img/bg.png');
@@ -31,17 +13,28 @@ h1,h2,h3,h4,h5,h6 {
 	display:		inline;
 }
 
-@wrapper-width:		@block-size * 6 + @block-spacing * 6;
-@wrapper-height:	@block-size *2 + @block-spacing * 2;
+#flex-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+}
 
-#wrapper {
-	position:		fixed;
-	width:			@wrapper-width;
-	height:			@wrapper-height;
-	top:			50%;
-	left:			50%;
-	margin-top:		-@wrapper-height / 2;
-	margin-left:	-@wrapper-width / 2;
+#title {
+  top: 50%;
+  left: 50%;
+  margin-left: -@slide-width/2;
+  margin-top: -@slide-height/2 - 150px;
+  position: absolute;
 }
 
 .panel( @size ) {
