@@ -38,15 +38,15 @@ h1,h2,h3,h4,h5,h6 {
 	position:			absolute;
 }
 
-.panel( @horizontal-size ) {
+.panel( @horizontal-size, @vertical-size ) {
 	width:				@block-size * @horizontal-size + @block-spacing * ( @horizontal-size - 1 );
-	height:				@block-size;
+	height:				@block-size * @vertical-size + @block-spacing * ( @vertical-size - 1 );
 	margin:				@block-spacing / 2;
 	float:				left;
 }
 
-.panel1	{ .panel( 1 ); }
+.panel1	{ .panel( 1, 1 ); }
 
-.panel2	{ .panel( 2 ); }
+.panel2	{ .panel( 2, 1 ); }
 
-.panel3	{ .panel( 3 ); }
+.panel3	{ .panel( 3, 1 ); }

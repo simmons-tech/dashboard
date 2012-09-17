@@ -10,8 +10,8 @@
 .slide {
 	width:				@slide-width;
 	height:				@slide-height;
-	-webkit-transition:	-webkit-transform 0.8s ease-in-out, opacity 1.2s ease-in-out;
-	-moz-transition:	-moz-transform 0.8s ease-in-out, opacity 1.2s ease-in-out;
+	-webkit-transition:	-webkit-transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+	-moz-transition:	-moz-transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 	-webkit-box-orient:	vertical;
 	-moz-box-orient:	vertical;
 	box-orient:			vertical;
@@ -21,12 +21,12 @@
 	overflow:			hidden;
 	display:			none;
 	position:			absolute;
-}
 
-.slide img {
-	max-width:			@slide-width;
-	max-height:			@slide-height;
-	margin:				5px;
+	img {
+		max-width:			@slide-width;
+		max-height:			@slide-height;
+		margin:				5px;
+	}
 }
 
 .slide.previous {
