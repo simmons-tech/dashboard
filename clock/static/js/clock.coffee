@@ -1,43 +1,43 @@
 $ ->
-        getTime = ->
-                d = new Date()
-                h = d.getHours()
-                m = d.getMinutes();
+	getTime = ->
 
-                # 12 hour clock
-                if h > 12
-                        h -= 12
+		d = new Date()
+		hour = d.getHours()
+		minute = d.getMinutes()
 
-                # two digit minute
-                if m < 10
-                        m = "0#{m}"
+		hourRotation = (hour * 30) + minute * 0.5 - (minute * 0.5 % 6)
+		$(".hour-hand").attr('style', "-webkit-transform: rotate(#{hourRotation}deg);")
 
-                $('#time h1').html("#{h}:#{m}")
+		minuteRotation = minute * 6
+		$(".minute-hand").attr('style', "-webkit-transform: rotate(#{minuteRotation}deg);")
 
-                # day of week
-                dow = d.getDay()
+		# 12 hour clock
+		if hour > 12
+			hour -= 12
 
-                days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+		# two digit minute
+		if minute < 10
+			minute = "0#{minute}"
 
-                dow = days[dow]
+		$('#time h1').html("#{hour}:#{minute}")
 
-                dom = d.getDate()
+		# day of week
+		dow = d.getDay()
 
-                month = d.getMonth()
+		days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-                months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+		dow = days[dow]
 
-                month = months[month]
+		dom = d.getDate()
 
-                $('#time h2').html("#{dow}, #{month} #{dom}")
+		month = d.getMonth()
 
-                drawTime(h, m)
+		months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 
-                setTimeout(getTime, 5000)
+		month = months[month]
 
-        startClock()
-        getTime()
-        
+		$('#time h2').html("#{dow}, #{month} #{dom}")
 
-        
-        
+		setTimeout(getTime, 5000)
+
+	getTime()
