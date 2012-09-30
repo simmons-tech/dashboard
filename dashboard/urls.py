@@ -6,6 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^$', 'dashboard.views.home'),
+    url(r'^sevenk$', 'dashboard.views.sevenk'),
     url(r'^events/', include('events.urls')),
     url(r'^nextbus/', include('nextbus.urls')),
     url(r'^news/', include('news.urls')),
