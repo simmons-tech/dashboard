@@ -1,0 +1,34 @@
+@clock-size: 450px;
+
+#clock {
+	width: @clock-size;
+	height: @clock-size;
+
+	.hour-hand {
+		width: @clock-size;
+		height: @clock-size;
+
+		img {
+			width: @clock-size;
+			height: @clock-size;
+		}
+
+		position: relative;
+		top: 0px;
+		left: 0px;
+	}
+
+	.minute-hand {
+		width: @clock-size;
+		height: @clock-size;
+
+		img {
+			width: @clock-size;
+			height: @clock-size;
+		}
+
+		position: relative;
+		top: -@clock-size;
+		left: 0px;
+	}
+}
