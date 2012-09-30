@@ -11,11 +11,11 @@
   position: relative;
   z-index: 8;
   width: 1560px;
-  height: 520px;
+  height: 780px;
 }
 .slide {
   width: 1560px;
-  height: 520px;
+  height: 780px;
   -webkit-transition: -webkit-transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
   -moz-transition: -moz-transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
   -webkit-box-orient: vertical;
@@ -30,7 +30,7 @@
 }
 .slide img {
   max-width: 1560px;
-  max-height: 520px;
+  max-height: 780px;
   margin: 5px;
 }
 .slide.previous {
@@ -38,10 +38,10 @@
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translatex(-3320px);
-  -moz-transform: translatex(-3320px);
-  -o-transform: translatex(-3320px);
-  -webkit-transform: translatex(-3320px);
+  -webkit-transform: translatex(-3720px);
+  -moz-transform: translatex(-3720px);
+  -o-transform: translatex(-3720px);
+  -webkit-transform: translatex(-3720px);
 }
 .slide.current {
   z-index: 9;
@@ -58,72 +58,72 @@
   visibility: visible;
   display: block;
   opacity: 1;
-  -webkit-transform: translatex(1660px);
-  -moz-transform: translatex(1660px);
-  -o-transform: translatex(1660px);
-  -webkit-transform: translatex(1660px);
+  -webkit-transform: translatex(1860px);
+  -moz-transform: translatex(1860px);
+  -o-transform: translatex(1860px);
+  -webkit-transform: translatex(1860px);
 }
 .slide.waiting {
   z-index: 7;
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translatex(3320px);
-  -moz-transform: translatex(3320px);
-  -o-transform: translatex(3320px);
-  -webkit-transform: translatex(3320px);
+  -webkit-transform: translatex(3720px);
+  -moz-transform: translatex(3720px);
+  -o-transform: translatex(3720px);
+  -webkit-transform: translatex(3720px);
 }
 .icon {
   position: relative;
   top: 50%;
-  margin-left: 10px;
-  margin-top: -75px;
-  width: 150px;
-  height: 150px;
+  margin-left: 120px;
+  margin-top: -225px;
+  width: 450px;
+  height: 450px;
   float: left;
 }
 .icon img {
-  width: 150px;
-  height: 150px;
+  width: 450px;
+  height: 450px;
 }
 .widget-content2 {
   position: relative;
-  width: 330px;
-  top: 10%;
+  width: 900px;
+  top: 15%;
   margin-left: auto;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
   text-align: center;
   vertical-align: middle;
 }
 .widget-content2 h1 {
-  font-size: 80px;
+  font-size: 180px;
 }
 .widget-content2 h2 {
-  font-size: 26px;
+  font-size: 70px;
   font-weight: bold;
 }
 .widget-content3 {
   position: relative;
-  width: 590px;
-  top: 10%;
+  width: 1680px;
+  top: 15%;
   margin-left: auto;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
   text-align: center;
   vertical-align: middle;
 }
 .widget-content3 h1 {
-  font-size: 80px;
+  font-size: 180px;
 }
 .widget-content3 h2 {
-  font-size: 26px;
+  font-size: 70px;
   font-weight: bold;
 }
 #time {
-  background: #25aae2;
+  background: #dab01c;
 }
 #weather {
   background: #0b9444;
@@ -131,17 +131,8 @@
 #nextbus {
   background: #bf1e2e;
 }
-#stocks {
-  background: #bf1e2e;
-}
-#events {
-  background: #dab01c;
-}
-#news {
-  background: #25aae2;
-}
 body {
-  background: url('../img/bg.png');
+  background: url('http://cosmosdarwin.com/12.jpg');
   overflow: hidden;
 }
 h1,
@@ -171,24 +162,24 @@ h6 {
   top: 50%;
   left: 50%;
   margin-left: -780px;
-  margin-top: -410px;
+  margin-top: -540px;
   position: absolute;
 }
 .panel1 {
-  width: 250px;
-  height: 250px;
-  margin: 5px;
+  width: 750px;
+  height: 750px;
+  margin: 15px;
   float: left;
 }
 .panel2 {
-  width: 510px;
-  height: 250px;
-  margin: 5px;
+  width: 1530px;
+  height: 750px;
+  margin: 15px;
   float: left;
 }
 .panel3 {
-  width: 770px;
-  height: 250px;
-  margin: 5px;
+  width: 2310px;
+  height: 750px;
+  margin: 15px;
   float: left;
 }

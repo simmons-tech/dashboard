@@ -5,7 +5,7 @@
 .icon {
 	position:			relative;
 	top:				50%;
-	margin-left:		@widget-spacing;
+	margin-left:		@widget-spacing + 60px;
 	margin-top:			-@icon-size / 2;
 	width:				@icon-size;
 	height:				@icon-size;
@@ -20,7 +20,7 @@
 	position:			relative;
 	width: 				@block-size * @size + @block-spacing * ( @size - 1 ) - @icon-size - @widget-spacing * 3;
 	// height: 			@block-size - @widget-spacing * 2;
-	top:				10%;	
+	top:				15%;	
 	margin-left:		auto;
 	margin-top:			@widget-spacing;
 	margin-right:		@widget-spacing;
@@ -29,10 +29,10 @@
 	vertical-align: 	middle;
 
 	h1 {
-		font-size:		80px;
+		font-size:		180px;
 	}
 	h2 {
-		font-size:		26px;
+		font-size:		70px;
 		font-weight:	bold;
 	}
 }
@@ -41,14 +41,8 @@
 
 .widget-content3 { .widget-content( 3 ); }
 
-#time		{ .widget( @blue ); }
+#time		{ .widget( @yellow ); }
 
 #weather	{ .widget( @green ); }
 
 #nextbus 	{ .widget( @red ); }
-
-#stocks		{ .widget( @red ); }
-
-#events		{ .widget( @yellow ); }
-
-#news		{ .widget( @blue ); }
