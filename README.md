@@ -1,5 +1,6 @@
 Simmons Hall Dashboard
 =========
+
 # Introduction
 This project is a reborn simmonsdash. The goal is to create a maintainable and expandable dashboard system for Simmons Hall. We are making the code as generic as possible so that it's usable by others. One of the main goals is to make the code accessible to future students and Simmons Tech members. We are doing our best to document our process and methodology so that anyone can pick up where we left off. If you have any questions about the project or want to contribute please contact us at simmons-tech@mit.edu. 
 
@@ -36,3 +37,11 @@ The weather app using the pywapi library and uses Yahoo as its data source. The 
 * Modify settings.py to search the new static directory
 * Add the widget to dashboard/templates/index.html, document the widget with comments
 * Add script to index.html
+
+#License and Warranty
+
+Copyright 2013 Simmons Hall
+
+Licensed under LGPL3 (the "License"). You may not use this work except in compliance with the License. You may obtain a copy of the License at http://opensource.org/licenses/lgpl-3.0.html.
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
