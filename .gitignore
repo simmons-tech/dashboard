@@ -32,3 +32,6 @@ pip-log.txt
 #Temp files
 *~
 *.#*
+
+# npm
+/node_modules/*
