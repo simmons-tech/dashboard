@@ -35,6 +35,5 @@ def getArrival(request):
            'next': times[0],
            'second': times[1],
            'third': times[2]}
-    
     return HttpResponse(json.dumps(out), mimetype="application/json")
 
