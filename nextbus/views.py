@@ -30,10 +30,19 @@ def getArrival(request):
     except:
         times = ['NA', 'NA', 'NA']
         title = 'Unavailable'
+
+    # Hacky fix to prevent 500's...
+    # Fill out the times list with some null data.
+    # In the long term, we should adapt a more flexible
+    # datastructure here, with the onus of sort out the
+    # number of buses on the JS side.
+    while len( times ) < 3:
+        times.append('NA')
         
     out = {'title': title,
            'next': times[0],
            'second': times[1],
            'third': times[2]}
+
     return HttpResponse(json.dumps(out), mimetype="application/json")
 
