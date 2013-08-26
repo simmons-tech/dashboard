@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^nextbus/', include('nextbus.urls')),
     url(r'^news/', include('news.urls')),
     url(r'^weather/', include('weather.urls')),
+    url(r'^laundry/', include('laundry.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
