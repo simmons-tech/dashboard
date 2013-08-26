@@ -4,11 +4,10 @@
   $(function() {
     return (function() {
       $.get('/nextbus', function(bus) {
-        console.log(bus.next);
         if (bus.next === "NA") {
           $("#nextbus .next").html("&Oslash;");
           $("#nextbus .second").html("No");
-          return $("#nextbus .third").html("Busses");
+          return $("#nextbus .third").html("Buses");
         } else {
           $("#nextbus .next").html("" + bus.next + " min");
           $("#nextbus .second").html("" + bus.second + " min");

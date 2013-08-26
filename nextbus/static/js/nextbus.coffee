@@ -1,11 +1,10 @@
 $ ->
 	(->
 		$.get('/nextbus', (bus) ->
-			console.log bus.next
 			if bus.next is "NA"
 				$("#nextbus .next").html("&Oslash;")
 				$("#nextbus .second").html("No")
-				$("#nextbus .third").html("Busses")
+				$("#nextbus .third").html("Buses")
 			else
 				$("#nextbus .next").html("#{bus.next} min")
 				$("#nextbus .second").html("#{bus.second} min")
