@@ -1,12 +1,11 @@
 $ ->
 	updateHand = (value, total, length, hand) ->
 		value -= total while value > total
-		if not value or value is total
-			value = total
+		if value is total or value is 0
 			hand.animate
-				hand: [value, total, length], 750, "bounce", ->
-				hand.attr hand: [0, total, length]
-
+				hand: [total, total, length], 750, "elastic"
+  			hand.attr
+				hand: [0, total, length]
 		else
 			hand.animate
 				hand: [value, total, length], 750, "elastic"
@@ -35,9 +34,9 @@ $ ->
 		hour_hand_length = 60.0 * size / 256.0
 
 		# Widths...
-		surround_width = 7.0 * size / 256.0
-		thick_hand_width = 8.0 * size / 256.0
-		thin_hand_width = 4.0 * size / 256.0
+		surround_width = 16.0 * size / 256.0
+		thick_hand_width = 16.0 * size / 256.0
+		thin_hand_width = 8.0 * size / 256.0
 
 		# Define the hand objects and the surrounding circle...
 		second_hand = clock.path().attr(param).attr(hand: [0, 60, second_hand_length]).attr("stroke-width": thin_hand_width)
@@ -92,5 +91,6 @@ $ ->
 
 			$('#time h2').html("#{dow}, #{month} #{dom}")
 
+			# Update every second to ensure nice looking ticks.
 			setTimeout arguments.callee, 1000
 		)()

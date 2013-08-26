@@ -7,13 +7,12 @@
       while (value > total) {
         value -= total;
       }
-      if (!value || value === total) {
-        value = total;
+      if (value === total || value === 0) {
         return hand.animate({
-          hand: [value, total, length]
-        }, 750, "bounce", function() {}, hand.attr({
+          hand: [total, total, length]
+        }, 750, "elastic", hand.attr, {
           hand: [0, total, length]
-        }));
+        });
       } else {
         return hand.animate({
           hand: [value, total, length]
@@ -44,9 +43,9 @@
       second_hand_length = 92.0 * size / 256.0;
       minute_hand_length = 90.0 * size / 256.0;
       hour_hand_length = 60.0 * size / 256.0;
-      surround_width = 7.0 * size / 256.0;
-      thick_hand_width = 8.0 * size / 256.0;
-      thin_hand_width = 4.0 * size / 256.0;
+      surround_width = 16.0 * size / 256.0;
+      thick_hand_width = 16.0 * size / 256.0;
+      thin_hand_width = 8.0 * size / 256.0;
       second_hand = clock.path().attr(param).attr({
         hand: [0, 60, second_hand_length]
       }).attr({
