@@ -3,4 +3,4 @@ $ ->
 	reload = ->
 		location.reload( true )
 	# Call it an hour after pageload.
-	setTimeout reload, 3600000
+	setTimeout(reload, 3600000)

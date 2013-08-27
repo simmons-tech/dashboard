@@ -22,7 +22,7 @@ The events app provides the MIT events schedule for the day requested. The MIT R
 ## Nextbus
 For information on the Nextbus api visit http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf. The Nextbus code evolved from the code used for Dormbase. 
 
-The next 3 shuttles can be accessed from /nextbus. It will return a json object with title, next, second, and third.
+The next shuttles can be accessed from /nextbus. It will return a json object with an array of objects, each of which contains a time_till arrival and a bus name.
 
 ## News
 The news app provides news from BBC. The feed is parsed and returns an array of JSON objects. Each JSON object has a title and summary. The news can be accessed from /news.
