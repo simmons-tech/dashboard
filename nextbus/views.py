@@ -3,46 +3,30 @@ from lxml import etree
 import json
 
 def getArrival(request):
-    try:
-        # Nextbus api: http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
-        baseURL = 'http://webservices.nextbus.com/service/publicXMLFeed?command=predictions'
-        agency = 'mit'
-        stop = 'simmhl'
+	try:
+		# Nextbus api: http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
+		baseURL = 'http://webservices.nextbus.com/service/publicXMLFeed?command=predictions'
+		agency = 'mit'
+		stop = 'simmhl'
 
-        techURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'tech', stop)
-        saferideURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'saferidecambwest', stop)
+		techURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'tech', stop)
+		saferideURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'saferidecambwest', stop)
 
-        techTimes = etree.parse(techURL).findall('predictions/direction/prediction')
-        saferideTimes = etree.parse(saferideURL).findall('predictions/direction/prediction')
+		techTimes = etree.parse(techURL).findall('predictions/direction/prediction')
+		saferideTimes = etree.parse(saferideURL).findall('predictions/direction/prediction')
+	except:
+		techTimes = []
+		saferideTimes = []
 
-        # If techTimes is empty, then it isn't running, so check Saferide
-        if techTimes:
-            times = [i.get('minutes') for i in techTimes]
-            title = 'Tech Shuttle'
-        elif saferideTimes:
-            times =  [i.get('minutes') for i in saferideTimes]
-            title = 'Saferide Cambridge West'
-        else:
-            # Fake times for testing
-            times = ['NA', 'NA', 'NA']
-            title = 'Unavailable'
+	times = []
 
-    except:
-        times = ['NA', 'NA', 'NA']
-        title = 'Unavailable'
+	def nextbus( name, time_till ):
+		return {'name':name,'time_till':time_till}
 
-    # Hacky fix to prevent 500's...
-    # Fill out the times list with some null data.
-    # In the long term, we should adapt a more flexible
-    # datastructure here, with the onus of sort out the
-    # number of buses on the JS side.
-    while len( times ) < 3:
-        times.append('NA')
-        
-    out = {'title': title,
-           'next': times[0],
-           'second': times[1],
-           'third': times[2]}
+	for bus in techTimes:
+		times.append( nextbus( "Tech Shuttle", bus.get('minutes') ) )
+	for bus in saferideTimes:
+		times.append( nextbus( "Saferide Cambridge West", bus.get('minutes') ) )
 
-    return HttpResponse(json.dumps(out), mimetype="application/json")
+	return HttpResponse(json.dumps({'buses': times}), mimetype="application/json")
 
