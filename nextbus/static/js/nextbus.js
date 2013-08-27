@@ -9,7 +9,11 @@
           $("#nextbus .second").html("No");
           return $("#nextbus .third").html("Buses");
         } else {
-          $("#nextbus .next").html("" + response.buses[0].time_till + " min");
+          if (response.buses[0].time_till === 0) {
+            $("#nextbus .next").html("Now");
+          } else {
+            $("#nextbus .next").html("" + response.buses[0].time_till + " min");
+          }
           if (response.buses.length >= 2) {
             $("#nextbus .second").html("" + response.buses[1].time_till + " min");
           } else {
