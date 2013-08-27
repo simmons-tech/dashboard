@@ -22,16 +22,12 @@ def getEvents(request):
         url = "http://events.mit.edu/rss"
         d = feedparser.parse(url)
 
-        print len(d.entries)
-
         for entry in d.entries:
             event = {'title': entry.title,
                      'description': entry.summary,
                      'time': formatEventsDate(entry.updated_parsed),}
 
             events.append(event)
-
-        print len(events)
 
     except:
         event = {'title': 'Unavailable',
