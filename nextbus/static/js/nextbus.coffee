@@ -6,7 +6,10 @@ $ ->
 				$("#nextbus .second").html("No")
 				$("#nextbus .third").html("Buses")
 			else
-				$("#nextbus .next").html("#{response.buses[0].time_till} min")
+				if response.buses[0].time_till is "0"
+					$("#nextbus .next").html("Now")
+				else
+					$("#nextbus .next").html("#{response.buses[0].time_till} min")
 
 				if response.buses.length >= 2
 					$("#nextbus .second").html("#{response.buses[1].time_till} min")
@@ -20,5 +23,5 @@ $ ->
 		)
 
 		# Run every 15 seconds
-		setTimeout arguments.callee, 15000
+		setTimeout( arguments.callee, 15000 )
 	)()

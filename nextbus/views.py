@@ -3,15 +3,15 @@ from lxml import etree
 import json
 
 def getArrival(request):
+	# Nextbus api: http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
+	baseURL = 'http://webservices.nextbus.com/service/publicXMLFeed?command=predictions'
+	agency = 'mit'
+	stop = 'simmhl'
+
+	techURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'tech', stop)
+	saferideURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'saferidecambwest', stop)
+
 	try:
-		# Nextbus api: http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
-		baseURL = 'http://webservices.nextbus.com/service/publicXMLFeed?command=predictions'
-		agency = 'mit'
-		stop = 'simmhl'
-
-		techURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'tech', stop)
-		saferideURL = '{}&a={}&r={}&s={}'.format(baseURL, agency, 'saferidecambwest', stop)
-
 		techTimes = etree.parse(techURL).findall('predictions/direction/prediction')
 		saferideTimes = etree.parse(saferideURL).findall('predictions/direction/prediction')
 	except:
@@ -28,5 +28,6 @@ def getArrival(request):
 	for bus in saferideTimes:
 		times.append( nextbus( "Saferide Cambridge West", bus.get('minutes') ) )
 
-	return HttpResponse(json.dumps({'buses': times}), mimetype="application/json")
+	times = sorted( times, key=lambda nb: nb['time_till'] )
 
+	return HttpResponse(json.dumps({'buses': times}), mimetype="application/json")
