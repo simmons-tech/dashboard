@@ -29,8 +29,8 @@
   position: absolute;
 }
 .slide img {
-  max-width: 1560px;
-  max-height: 520px;
+  width: 100%;
+  height: 100%;
   margin: 5px;
 }
 .slide.previous {
@@ -38,40 +38,36 @@
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translatex(-3320px);
-  -moz-transform: translatex(-3320px);
-  -o-transform: translatex(-3320px);
-  -webkit-transform: translatex(-3320px);
+  -moz-transform: translateX(-3320px);
+  -o-transform: translateX(-3320px);
+  -webkit-transform: translateX(-3320px);
 }
 .slide.current {
   z-index: 9;
   visibility: visible;
   display: block;
   opacity: 1;
-  -webkit-transform: translatex(0px);
-  -moz-transform: translatex(0px);
-  -o-transform: translatex(0px);
-  -webkit-transform: translatex(0px);
+  -moz-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
 }
 .slide.next {
   z-index: 8;
   visibility: visible;
   display: block;
   opacity: 1;
-  -webkit-transform: translatex(1660px);
-  -moz-transform: translatex(1660px);
-  -o-transform: translatex(1660px);
-  -webkit-transform: translatex(1660px);
+  -moz-transform: translateX(1660px);
+  -o-transform: translateX(1660px);
+  -webkit-transform: translateX(1660px);
 }
 .slide.waiting {
   z-index: 7;
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translatex(3320px);
-  -moz-transform: translatex(3320px);
-  -o-transform: translatex(3320px);
-  -webkit-transform: translatex(3320px);
+  -moz-transform: translateX(3320px);
+  -o-transform: translateX(3320px);
+  -webkit-transform: translateX(3320px);
 }
 .icon {
   position: relative;
