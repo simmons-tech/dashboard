@@ -13,6 +13,7 @@ Each widget on the dashboard is its own application. Each application is respons
 ## Python Libraries
 * pywapi
 * django
+* requests
 
 # Applications
 ## Events
