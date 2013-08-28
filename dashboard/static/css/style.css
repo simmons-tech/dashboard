@@ -157,6 +157,11 @@
 #package_list {
   background: #25aae2;
 }
+.package-column {
+  position: relative;
+  float: left;
+  width: 33%;
+}
 body {
   background: url('../img/bg.png');
   overflow: hidden;
