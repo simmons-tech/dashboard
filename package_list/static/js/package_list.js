@@ -37,7 +37,7 @@
         $('#col1').html(format_people(response.people.slice(0, split1)));
         $('#col2').html(format_people(response.people.slice(split1, split2)));
         if (more > 0) {
-          return $('#col3').html(format_people(response.people.slice(split2, split3)) + "( +" + more + " more )");
+          return $('#col3').html(format_people(response.people.slice(split2, split3)) + "(+" + more + " more)");
         } else {
           return $('#col3').html(format_people(response.people.slice(split2, split3)));
         }
