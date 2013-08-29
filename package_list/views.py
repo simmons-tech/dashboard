@@ -35,6 +35,8 @@ def get_package_list(request):
 		else:
 			pdict[p.recipient] = 1
 
+
+	session.close()
 	# this step is unnessary, we should just reformat frontend code, but hack hack hack!
 	people = []
 	for p, v in pdict.iteritems():
