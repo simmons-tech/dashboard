@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
+<g id="packages_icon" inkscape:label="Box" inkscape:groupmode="layer">
+	<g id="g4131_1_" transform="matrix(0.336776,0,0,0.3375937,-5.6912262,-16.582999)">
+		<polygon fill="#FFFFFF" points="401.471,679.215 740.088,505.993 740.503,283.755 401.921,414.738 		"/>
+		<g>
+			<path fill="#FFFFFF" d="M412.215,177.887L69.368,266.54l327.481,138.215l332.38-129.032L412.215,177.887z M261.124,331.146
+				l-15.428-6.439l278.698-97.986l17.198,5.204L261.124,331.146z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<path fill="#FFFFFF" d="M13.284,75.991l-0.124,79.164l112.314,57.571l0.364-89.045L13.284,75.991z M109.992,154.617l-35.678-16.7
+		V118.18l35.678,15.942V154.617z"/>
+</g>
+</svg>

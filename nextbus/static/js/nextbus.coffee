@@ -6,7 +6,7 @@ $ ->
 				$("#nextbus .second").html("No")
 				$("#nextbus .third").html("Buses")
 			else
-				if response.buses[0].time_till is 0
+				if response.buses[0].time_till is "0"
 					$("#nextbus .next").html("Now")
 				else
 					$("#nextbus .next").html("#{response.buses[0].time_till} min")

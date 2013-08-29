@@ -14,6 +14,7 @@ Each widget on the dashboard is its own application. Each application is respons
 * pywapi
 * django
 * requests
+* parse
 
 # Applications
 ## Events

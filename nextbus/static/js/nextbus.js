@@ -9,7 +9,7 @@
           $("#nextbus .second").html("No");
           return $("#nextbus .third").html("Buses");
         } else {
-          if (response.buses[0].time_till === 0) {
+          if (response.buses[0].time_till === "0") {
             $("#nextbus .next").html("Now");
           } else {
             $("#nextbus .next").html("" + response.buses[0].time_till + " min");

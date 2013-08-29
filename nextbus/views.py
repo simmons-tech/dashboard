@@ -28,6 +28,6 @@ def getArrival(request):
 	for bus in saferideTimes:
 		times.append( nextbus( "Saferide Cambridge West", bus.get('minutes') ) )
 
-	#TODO: Sort times by time_till
+	times = sorted( times, key=lambda nb: nb['time_till'] )
 
 	return HttpResponse(json.dumps({'buses': times}), mimetype="application/json")
