@@ -32,5 +32,5 @@ $ ->
 		)
 
 		# Run every 10 seconds (for debug)
-		setTimeout arguments.callee, 10000
+		setTimeout( arguments.callee, 300000 )
 	)()

@@ -42,7 +42,7 @@
           return $('#col3').html(format_people(response.people.slice(split2, split3)));
         }
       });
-      return setTimeout(arguments.callee, 10000);
+      return setTimeout(arguments.callee, 300000);
     })();
   });
 
