@@ -26,7 +26,7 @@ $ ->
 			$('#col1').html(format_people( response.people[0...split1] )) # 8 people max.
 			$('#col2').html(format_people( response.people[split1...split2] ))
 			if more > 0
-				$('#col3').html(format_people( response.people[split2...split3] ) + "( +" + more + " more )")
+				$('#col3').html(format_people( response.people[split2...split3] ) + "(+" + more + " more)")
 			else
 				$('#col3').html(format_people( response.people[split2...split3] ))
 		)
