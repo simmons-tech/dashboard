@@ -20,13 +20,33 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
 ###############################################################################
 
-$ ->
-	(->
-		$.get('/events', (event) ->
-			$('#events .title').html(event.title)
-			$('#events .time').html(event.time)
-		)
-		
-		# Run every 15 seconds
-		setTimeout arguments.callee, 15000
-	)()
+all: core-dashboard clock-widget dining-widget events-widget laundry-widget news-widget nextbus-widget package_list-widget weather-widget
+
+core-dashboard:
+	coffee -c dashboard/static/js/*.coffee
+	lessc dashboard/static/css/style.less > dashboard/static/css/style.css
+	lessc dashboard/static/css/sevenk.less > dashboard/static/css/sevenk.css
+
+clock-widget:
+	coffee -c clock/static/js/*.coffee
+
+dining-widget:
+	coffee -c dining/static/js/*.coffee
+
+events-widget:
+	coffee -c events/static/js/*.coffee
+
+laundry-widget:
+	coffee -c laundry/static/js/*.coffee
+
+news-widget:
+	coffee -c news/static/js/*.coffee
+
+nextbus-widget:
+	coffee -c nextbus/static/js/*.coffee
+
+package_list-widget:
+	coffee -c package_list/static/js/*.coffee
+
+weather-widget:
+	coffee -c weather/static/js/*.coffee

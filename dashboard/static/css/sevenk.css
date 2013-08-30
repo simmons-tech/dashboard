@@ -1,3 +1,87 @@
+/*# About #####################################################################
+#                                                                             #
+# This code is part of the Simmons Hall Dashboard project. An up-to-date      #
+# version can be found at https://github.com/simmons-tech/dashboard .         #
+#                                                                             #
+# The project is built an maintained by Simmons Tech, a student organization  #
+# at MIT. The original code was produced by Luke O'Malley '14 and             #
+# Will Oursler '15                                                            #
+#                                                                             #
+### License and Warranty ######################################################
+#                                                                             #
+# Copyright 2013 Simmons Hall                                                 #
+#                                                                             #
+# Licensed under LGPL3 (the "License"). You may not use this work except in   #
+# compliance with the License. You may obtain a copy of the License at        #
+# http://opensource.org/licenses/lgpl-3.0.html .                              #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
+#############################################################################*/
+/*# About #####################################################################
+#                                                                             #
+# This code is part of the Simmons Hall Dashboard project. An up-to-date      #
+# version can be found at https://github.com/simmons-tech/dashboard .         #
+#                                                                             #
+# The project is built an maintained by Simmons Tech, a student organization  #
+# at MIT. The original code was produced by Luke O'Malley '14 and             #
+# Will Oursler '15                                                            #
+#                                                                             #
+### License and Warranty ######################################################
+#                                                                             #
+# Copyright 2013 Simmons Hall                                                 #
+#                                                                             #
+# Licensed under LGPL3 (the "License"). You may not use this work except in   #
+# compliance with the License. You may obtain a copy of the License at        #
+# http://opensource.org/licenses/lgpl-3.0.html .                              #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
+#############################################################################*/
+/*# About #####################################################################
+#                                                                             #
+# This code is part of the Simmons Hall Dashboard project. An up-to-date      #
+# version can be found at https://github.com/simmons-tech/dashboard .         #
+#                                                                             #
+# The project is built an maintained by Simmons Tech, a student organization  #
+# at MIT. The original code was produced by Luke O'Malley '14 and             #
+# Will Oursler '15                                                            #
+#                                                                             #
+### License and Warranty ######################################################
+#                                                                             #
+# Copyright 2013 Simmons Hall                                                 #
+#                                                                             #
+# Licensed under LGPL3 (the "License"). You may not use this work except in   #
+# compliance with the License. You may obtain a copy of the License at        #
+# http://opensource.org/licenses/lgpl-3.0.html .                              #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
+#############################################################################*/
+/*# About #####################################################################
+#                                                                             #
+# This code is part of the Simmons Hall Dashboard project. An up-to-date      #
+# version can be found at https://github.com/simmons-tech/dashboard .         #
+#                                                                             #
+# The project is built an maintained by Simmons Tech, a student organization  #
+# at MIT. The original code was produced by Luke O'Malley '14 and             #
+# Will Oursler '15                                                            #
+#                                                                             #
+### License and Warranty ######################################################
+#                                                                             #
+# Copyright 2013 Simmons Hall                                                 #
+#                                                                             #
+# Licensed under LGPL3 (the "License"). You may not use this work except in   #
+# compliance with the License. You may obtain a copy of the License at        #
+# http://opensource.org/licenses/lgpl-3.0.html .                              #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
+#############################################################################*/
 @font-face {
   font-family: "Open Sans Light";
   src: url("../fonts/OpenSans-Light.eot");
@@ -7,6 +91,27 @@
   font-family: "Open Sans Light", Helvetica;
   color: #ffffff;
 }
+/*# About #####################################################################
+#                                                                             #
+# This code is part of the Simmons Hall Dashboard project. An up-to-date      #
+# version can be found at https://github.com/simmons-tech/dashboard .         #
+#                                                                             #
+# The project is built an maintained by Simmons Tech, a student organization  #
+# at MIT. The original code was produced by Luke O'Malley '14 and             #
+# Will Oursler '15                                                            #
+#                                                                             #
+### License and Warranty ######################################################
+#                                                                             #
+# Copyright 2013 Simmons Hall                                                 #
+#                                                                             #
+# Licensed under LGPL3 (the "License"). You may not use this work except in   #
+# compliance with the License. You may obtain a copy of the License at        #
+# http://opensource.org/licenses/lgpl-3.0.html .                              #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
+#############################################################################*/
 .slides {
   position: relative;
   z-index: 8;
@@ -29,8 +134,8 @@
   position: absolute;
 }
 .slide img {
-  max-width: 1560px;
-  max-height: 780px;
+  width: 100%;
+  height: 100%;
   margin: 5px;
 }
 .slide.previous {
@@ -38,41 +143,58 @@
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translatex(-3720px);
-  -moz-transform: translatex(-3720px);
-  -o-transform: translatex(-3720px);
-  -webkit-transform: translatex(-3720px);
+  -moz-transform: translateX(-3720px);
+  -o-transform: translateX(-3720px);
+  -webkit-transform: translateX(-3720px);
 }
 .slide.current {
   z-index: 9;
   visibility: visible;
   display: block;
   opacity: 1;
-  -webkit-transform: translatex(0px);
-  -moz-transform: translatex(0px);
-  -o-transform: translatex(0px);
-  -webkit-transform: translatex(0px);
+  -moz-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
 }
 .slide.next {
   z-index: 8;
   visibility: visible;
   display: block;
   opacity: 1;
-  -webkit-transform: translatex(1860px);
-  -moz-transform: translatex(1860px);
-  -o-transform: translatex(1860px);
-  -webkit-transform: translatex(1860px);
+  -moz-transform: translateX(1860px);
+  -o-transform: translateX(1860px);
+  -webkit-transform: translateX(1860px);
 }
 .slide.waiting {
   z-index: 7;
   visibility: visible;
   display: block;
   opacity: 0;
-  -webkit-transform: translatex(3720px);
-  -moz-transform: translatex(3720px);
-  -o-transform: translatex(3720px);
-  -webkit-transform: translatex(3720px);
+  -moz-transform: translateX(3720px);
+  -o-transform: translateX(3720px);
+  -webkit-transform: translateX(3720px);
 }
+/*# About #####################################################################
+#                                                                             #
+# This code is part of the Simmons Hall Dashboard project. An up-to-date      #
+# version can be found at https://github.com/simmons-tech/dashboard .         #
+#                                                                             #
+# The project is built an maintained by Simmons Tech, a student organization  #
+# at MIT. The original code was produced by Luke O'Malley '14 and             #
+# Will Oursler '15                                                            #
+#                                                                             #
+### License and Warranty ######################################################
+#                                                                             #
+# Copyright 2013 Simmons Hall                                                 #
+#                                                                             #
+# Licensed under LGPL3 (the "License"). You may not use this work except in   #
+# compliance with the License. You may obtain a copy of the License at        #
+# http://opensource.org/licenses/lgpl-3.0.html .                              #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
+#############################################################################*/
 .icon {
   position: relative;
   top: 50%;
