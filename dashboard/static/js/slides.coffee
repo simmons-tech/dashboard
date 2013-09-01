@@ -29,8 +29,10 @@ $ ->
 		Array::slice.call list or [], 0
 
 	byId = (id) ->
+		# If we see that we've got a string, get the associated element.
 		return doc.getElementById(id) if typeof id is "string"
-		id
+		# Otherwise, assume we've been passed that element already.
+		return id
 
 	query = (query, root) ->
 		queryAll(query, root)[0]
