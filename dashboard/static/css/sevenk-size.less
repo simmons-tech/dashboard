@@ -1,4 +1,4 @@
-### About #####################################################################
+/*# About #####################################################################
 #                                                                             #
 # This code is part of the Simmons Hall Dashboard project. An up-to-date      #
 # version can be found at https://github.com/simmons-tech/dashboard .         #
@@ -18,15 +18,14 @@
 # Unless required by applicable law or agreed to in writing, software         #
 # distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
-###############################################################################
+#############################################################################*/
 
-$ ->
-	(->
-		$.get('/events', (event) ->
-			$('#events .title').html(event.title)
-			$('#events .time').html(event.time)
-		)
-		
-		# Run every 15 seconds
-		setTimeout arguments.callee, 15000
-	)()
+@block-size:		750px;
+@block-spacing:		30px;
+
+@icon-size:		450px;
+@widget-spacing:	60px;
+
+@slide-width:		@block-size * 2 + @block-spacing * 2;
+@slide-height:		@block-size *1 + @block-spacing * 1;
+@slide-spacing:		300px;
