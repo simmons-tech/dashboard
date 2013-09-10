@@ -26,7 +26,6 @@ import datetime
 import lxml.html
 import json
 import parse
-import dateutil.parser
 
 def parse_menu( raw ):
 	menu = {}
@@ -59,7 +58,7 @@ def menus_for_date( date ):
 	for raw_entry in feedparser.parse(url).entries:
 		# Convert the title of the post, which contains a string date,
 		# into an actual date object. Compare to see if we've got what we need.
-		if date == dateutil.parser.parse( raw_entry.title_detail.value ).date():
+		if date == datetime.datetime.strptime(raw_entry.title_detail.value[5:], '%d %b %Y').date():
 
 			# First, split up the HTML on h3 tags, which represent meals...
 			meals_data = raw_entry.summary.split("<h3>")
