@@ -21,16 +21,14 @@
 #############################################################################*/
 
 @import "color.less";
-@import "lightweight-size.less";
+@import "size.less";
 @import "font.less";
 
-@import "slides.less";
-@import "lightweight-widgets.less";
-
-// Widget specific imports
+@import "lightweight-slides.less";
+@import "widgets.less";
 
 body {
-	background-color:		#f7f7f7;
+	background:			@light-grey;
 	overflow:			hidden;
 }
 
@@ -46,11 +44,11 @@ h1,h2,h3,h4,h5,h6 {
 	display:			-webkit-box;
 	display:			-moz-box;
 	display:			box;
-	-webkit-box-pack:		center;
-	-moz-box-pack:			center;
+	-webkit-box-pack:	center;
+	-moz-box-pack:		center;
 	box-pack:			center;
-	-webkit-box-align:		center;
-	-moz-box-align:			center;
+	-webkit-box-align:	center;
+	-moz-box-align:		center;
 	box-align:			center;
 }
 
@@ -58,7 +56,7 @@ h1,h2,h3,h4,h5,h6 {
 	top:				50%;
 	left:				50%;
 	margin-left:			-@slide-width/2;
-	margin-top:			-@slide-height/2 - 150px;
+	margin-top:			-@slide-height/2 - 80px;
 	position:			absolute;
 }
 
@@ -74,3 +72,5 @@ h1,h2,h3,h4,h5,h6 {
 .panel2	{ .panel( 2, 1 ); }
 
 .panel3	{ .panel( 3, 1 ); }
+
+.panel-all{ .panel( 6, 2 ); }

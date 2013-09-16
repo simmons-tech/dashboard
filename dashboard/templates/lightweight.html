@@ -31,79 +31,44 @@
 	</head>
 	<body>
 		<div id="flex-container">
-
-			<div class="slides">
-
-				<div class="slide" id="landing-slide">
-
-					<!-- Clock Widget -->
-					<div class="panel2" id="time">
-						<div class="icon">
-							<div id="clock">
-							</div>
-						</div>
-						<div class="widget-content2">
-							<h1>N/A</h1></br>
-							<h2>N/A</h2>
-						</div>
-					</div>
-					<!-- End Clock Widget -->
-
-				</div>
-
-				<div class="slide" id="res-event">
-
-					<!-- Weather Widget-->
-					<div class="panel2" id="weather">
-						<div class="icon">
-							<img src="{{ STATIC_URL }}img/no_icon.png"></img>
-						</div>
-						<div class="widget-content2">
-							<h1 class="temp">N/A</h1><br />
-							<h2 class="description">Unavailable</h2>
-						</div>
-					</div>
-					<!-- End Weather Widget-->
-
-				</div>
-
-				<div class="slide" id="res-event1">
-
-					<!-- Nextbus Widget -->
-					<div class="panel2" id="nextbus">
-						<div class="icon">
-							<img src="{{ STATIC_URL }}img/bus.png"></img>
-						</div>
-						<div class="widget-content2">
-							<h1 class="next">N/A</h1><br />
-							<h2><span class="second">N/A</span> <span class="third">N/A</span></h2>
-						</div>
-					</div>
-					<!-- End Nextbus Widget-->
-
-				</div>
-
-				<div class="slide" id="res-event2">
-
-					<!-- Weather Widget-->
-					<div class="panel2" id="weather">
-						<div class="icon">
-							<img src="{{ STATIC_URL }}img/no_icon.png"></img>
-						</div>
-						<div class="widget-content2">
-							<h1 class="temp">N/A</h1><br />
-							<h2 class="description">Unavailable</h2>
-						</div>
-					</div>
-					<!-- End Weather Widget-->
-
-				</div>
-
+			<div id="title">
+				<img src="{{ STATIC_URL }}img/masthead.png"></img>
 			</div>
 
+			<div class="slides">
+				{% for slide in slides %}
+					{% if slide.stype == "WIDGET" %}
+						{% include "widget_slide.html" %}
+					{% endif %}
+
+					{% if slide.stype == "POSTER" %}
+						<div class="slide" id="res-event">
+							<img src="{{ slide.path }}"></img>
+						</div>
+					{% endif %}
+					{% if slide.stype == "PACKAGE-LIST" %}
+						<div class="slide" id="package_list_test">
+							<!-- Package List Widget-->
+							<div class="panel-all" id="package_list">
+								<div class="icon">
+									<img src="{{ STATIC_URL }}img/packages.png"></img>
+								</div>
+								<div class="widget-content-all">
+									<h1 id="packages-title">Packages</h1><br />
+									<h2>
+										<div class="package-column" id="col1"></div>
+										<div class="package-column" id="col2"><br/><br/>No Packages!</div>
+										<div class="package-column" id="col3"></div>
+									</h2>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
 		</div>
 
 		{% include "scripts.html" %}
-
+		
 	</body>
 </html>
