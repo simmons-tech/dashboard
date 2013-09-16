@@ -26,6 +26,7 @@ core-dashboard:
 	coffee -c dashboard/static/js/*.coffee
 	lessc -x dashboard/static/css/style.less > dashboard/static/css/style.css
 	lessc -x dashboard/static/css/sevenk.less > dashboard/static/css/sevenk.css
+	lessc -x dashboard/static/css/lightweight.less > dashboard/static/css/lightweight.css
 
 clock-widget:
 	coffee -c clock/static/js/*.coffee
