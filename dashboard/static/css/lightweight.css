@@ -13,7 +13,7 @@
 #time{background:#dab01c;}
 #weather{background:#0b9444;}
 #nextbus{background:#bf1e2e;}
-body{background:url('../img/bg.png');overflow:hidden;}
+body{background-color:#f7f7f7;overflow:hidden;}
 h1,h2,h3,h4,h5,h6{display:inline;}
 #flex-container{width:100%;height:100%;margin:0;padding:0;display:-webkit-box;display:-moz-box;display:box;-webkit-box-pack:center;-moz-box-pack:center;box-pack:center;-webkit-box-align:center;-moz-box-align:center;box-align:center;}
 #title{top:50%;left:50%;margin-left:-780px;margin-top:-540px;position:absolute;}
