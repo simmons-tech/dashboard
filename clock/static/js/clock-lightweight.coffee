@@ -20,38 +20,38 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
 ###############################################################################
 
-from django.template import RequestContext
-from django.shortcuts import render_to_response, render
-import requests
+$ ->
+		(->
+			d = new Date()
+			hour = d.getHours()
+			# 12 hour clock
+			if hour > 12
+				hour -= 12
+			minute = d.getMinutes()
+			second = d.getSeconds()
 
-def home(request):
-	class Slide():
-		def __init__(self, slide_type, path="NA"):
-			# slide_type is of WIDGET or POSTER
-			self.stype = slide_type
-			self.path = path
+			# two digit minute
+			if minute < 10
+				minute = "0#{minute}"
 
-	slides = []
-	img_urls = requests.get("https://adat.scripts.mit.edu:444/www/dev/simmons/display/dashboard.php").json()
+			$('#time h1').html("#{hour}:#{minute}")
 
-	# naively insert a widget slide after every 2 images
-	for i in range(len(img_urls)):
-		if i % 2:
-			slides.append(Slide("WIDGET"))
-		slides.append(Slide("POSTER", img_urls[i]))
-	slides.append(Slide("PACKAGE-LIST"))
+			# day of week
+			dow = d.getDay()
 
-	return render(request, "index.html", {"slides": slides})
+			days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-def sevenk(request):
-    return render_to_response('sevenk.html', context_instance = RequestContext(request))
+			dow = days[dow]
 
-def lightweight(request):
-    	class Slide():
-		def __init__(self, slide_type, path="NA"):
-			# slide_type is of WIDGET or POSTER
-			self.stype = slide_type
-			self.path = path
+			dom = d.getDate()
 
-	slides = [Slide("WIDGET"),Slide("PACKAGE-LIST")]
-	return render(request, "lightweight.html", {"slides": slides})
+			month = d.getMonth()
+
+			months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+			month = months[month]
+
+			$('#time h2').html("#{dow}, #{month} #{dom}")
+
+			setTimeout arguments.callee, 60000
+		)()

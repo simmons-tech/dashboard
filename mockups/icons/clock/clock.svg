@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="clock.svg"
+   inkscape:export-filename="/home/woursler/Code/Simmons Tech/dashboard/mockups/icons/clock/clock.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.23"
+     inkscape:cx="251.5175"
+     inkscape:cy="140.99552"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1024"
+     inkscape:window-height="541"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-796.36218)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="M 128 34 C 125.79086 34 124 35.790861 124 38 L 124 128 C 124 130.20914 125.79086 132 128 132 C 130.20914 132 132 130.20914 132 128 L 132 38 C 132 35.790861 130.20914 34 128 34 z "
+       id="rect3007"
+       transform="translate(0,796.36218)" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 255.99999,924.3622 c 0,-70.69245 -57.30755,-128 -128,-128 -70.692445,10e-6 -127.9999850000001,57.30755 -127.9999850000001,128 0,70.69245 57.3075400000001,128 127.9999850000001,128 70.69245,0 128,-57.30755 128,-128 z m -13,0 c 0,63.51275 -51.48725,115 -115,115 -63.512745,0 -114.999985,-51.48725 -114.999985,-115 0,-63.51275 51.48724,-114.99999 114.999985,-115 63.51275,0 115,51.48725 115,115 z"
+       id="path2985" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 127.99999,920.3622 c -2.20914,0 -4,1.79086 -4,4 0,2.20914 1.79086,4 4,4 l 60,0 c 2.20914,0 4,-1.79086 4,-4 0,-2.20914 -1.79086,-4 -4,-4 l -60,0 z"
+       id="path3005"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
