@@ -20,13 +20,51 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
 #############################################################################*/
 
-/* Note that Lato needs to be included in HTML. Put the following line under <head>
-
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/lightweight.css">
-
-*/
-
-* {
-  font-family:	Lato, sans-serif;
-  color:	@white;
+.widget( @color ) {
+	background:			@color;
 }
+
+.icon {
+	position:			relative;
+	top:				50%;
+	margin-left:		@widget-spacing + 60px;
+	margin-top:			-@icon-size / 2;
+	width:				@icon-size;
+	height:				@icon-size;
+	float:				left;
+	img {
+	    width: 			@icon-size;
+	    height: 		@icon-size;
+	}
+}
+
+.widget-content( @size ) {
+	position:			relative;
+	width: 				@block-size * @size + @block-spacing * ( @size - 1 ) - @icon-size - @widget-spacing * 3;
+	// height: 			@block-size - @widget-spacing * 2;
+	top:				15%;	
+	margin-left:		auto;
+	margin-top:			@widget-spacing;
+	margin-right:		@widget-spacing;
+	margin-bottom:		@widget-spacing;
+	text-align:			center;
+	vertical-align: 	middle;
+
+	h1 {
+		font-size:		180px;
+	}
+	h2 {
+		font-size:		70px;
+		font-weight:	bold;
+	}
+}
+
+.widget-content2 { .widget-content( 2 ); }
+
+.widget-content3 { .widget-content( 3 ); }
+
+#time		{ .widget( @yellow ); }
+
+#weather	{ .widget( @green ); }
+
+#nextbus 	{ .widget( @red ); }

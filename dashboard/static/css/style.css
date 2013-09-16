@@ -1,4 +1,4 @@
-@font-face{font-family:"Open Sans Light";src:url("../fonts/OpenSans-Light.eot");src:local("☺"),url("../fonts/OpenSans-Light.woff") format("woff");}*{font-family:"Open Sans Light",Helvetica;color:#ffffff;}
+*{font-family:Lato,sans-serif;color:#ffffff;}
 .slides{position:relative;z-index:8;width:1560px;height:520px;}
 .slide{width:1560px;height:520px;-webkit-transition:-webkit-transform 0.8s ease-in-out,opacity 0.8s ease-in-out;-moz-transition:-moz-transform 0.8s ease-in-out,opacity 0.8s ease-in-out;-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;overflow:hidden;display:none;position:absolute;}.slide img{width:100%;height:100%;margin:5px;}
 .slide.previous{z-index:7;visibility:visible;display:block;opacity:0;-moz-transform:translateX(-3320px);-o-transform:translateX(-3320px);-webkit-transform:translateX(-3320px);}

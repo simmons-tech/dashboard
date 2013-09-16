@@ -45,3 +45,6 @@ def home(request):
 
 def sevenk(request):
     return render_to_response('sevenk.html', context_instance = RequestContext(request))
+
+def lightweight(request):
+    return render_to_response('lightweight.html', context_instance = RequestContext(request))
