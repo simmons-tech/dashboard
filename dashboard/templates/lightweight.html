@@ -38,7 +38,7 @@
 			<div class="slides">
 				{% for slide in slides %}
 					{% if slide.stype == "WIDGET" %}
-						{% include "widget_slide.html" %}
+						{% include "widget-slide-lightweight.html" %}
 					{% endif %}
 
 					{% if slide.stype == "POSTER" %}
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 
-		{% include "scripts.html" %}
+		{% include "scripts-lightweight.html" %}
 		
 	</body>
 </html>
