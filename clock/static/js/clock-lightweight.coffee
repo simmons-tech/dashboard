@@ -1,4 +1,4 @@
-/*# About #####################################################################
+### About #####################################################################
 #                                                                             #
 # This code is part of the Simmons Hall Dashboard project. An up-to-date      #
 # version can be found at https://github.com/simmons-tech/dashboard .         #
@@ -18,53 +18,40 @@
 # Unless required by applicable law or agreed to in writing, software         #
 # distributed under the License is distributed on an "AS IS" BASIS, WITHOUT   #
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
-#############################################################################*/
+###############################################################################
 
-.widget( @color ) {
-	background:			@color;
-}
+$ ->
+		(->
+			d = new Date()
+			hour = d.getHours()
+			# 12 hour clock
+			if hour > 12
+				hour -= 12
+			minute = d.getMinutes()
+			second = d.getSeconds()
 
-.icon {
-	position:			relative;
-	top:				50%;
-	margin-left:		@widget-spacing + 60px;
-	margin-top:			-@icon-size / 2;
-	width:				@icon-size;
-	height:				@icon-size;
-	float:				left;
-	img {
-	    width: 			@icon-size;
-	    height: 		@icon-size;
-	}
-}
+			# two digit minute
+			if minute < 10
+				minute = "0#{minute}"
 
-.widget-content( @size ) {
-	position:			relative;
-	width: 				@block-size * @size + @block-spacing * ( @size - 1 ) - @icon-size - @widget-spacing * 3;
-	// height: 			@block-size - @widget-spacing * 2;
-	top:				15%;	
-	margin-left:		auto;
-	margin-top:			@widget-spacing;
-	margin-right:		@widget-spacing;
-	margin-bottom:		@widget-spacing;
-	text-align:			center;
-	vertical-align: 	middle;
+			$('#time h1').html("#{hour}:#{minute}")
 
-	h1 {
-		font-size:		180px;
-	}
-	h2 {
-		font-size:		70px;
-		font-weight:	bold;
-	}
-}
+			# day of week
+			dow = d.getDay()
 
-.widget-content2 { .widget-content( 2 ); }
+			days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-.widget-content3 { .widget-content( 3 ); }
+			dow = days[dow]
 
-#time		{ .widget( @yellow ); }
+			dom = d.getDate()
 
-#weather	{ .widget( @green ); }
+			month = d.getMonth()
 
-#nextbus 	{ .widget( @red ); }
+			months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+			month = months[month]
+
+			$('#time h2').html("#{dow}, #{month} #{dom}")
+
+			setTimeout arguments.callee, 60000
+		)()
