@@ -20,7 +20,7 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
 ###############################################################################
 
-all: core-dashboard clock-widget dining-widget events-widget laundry-widget news-widget nextbus-widget package_list-widget weather-widget
+all: core-dashboard clock-widget dining-widget events-widget laundry-widget news-widget nextbus-widget packages-widget people-widget weather-widget
 
 core-dashboard:
 	coffee -c dashboard/static/js/*.coffee
@@ -46,8 +46,11 @@ news-widget:
 nextbus-widget:
 	coffee -c nextbus/static/js/*.coffee
 
-package_list-widget:
-	coffee -c package_list/static/js/*.coffee
+packages-widget:
+	coffee -c packages/static/js/*.coffee
+
+people-widget:
+	coffee -c people/static/js/*.coffee
 
 weather-widget:
 	coffee -c weather/static/js/*.coffee
