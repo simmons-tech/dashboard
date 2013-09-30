@@ -23,5 +23,5 @@
 from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('',
-    url(r'^$', 'package_list.views.get_package_list'),
+    url(r'^$', 'packages.views.get_packages'),
 )

@@ -20,30 +20,39 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.            #
 ###############################################################################
 
-from django.conf.urls import patterns, include, url
+$ ->
+	(->
+		$.get('/packages', (response) ->
+			# For now, just print out any response we get.
+			console.log(JSON.stringify(response))
+			format_person = ( person ) ->
+				if person.number > 1
+					return person.owner_name + " (x"+person.number+")"
+				return person.owner_name
+			format_people = ( people ) ->
+				s = ""
+				s += format_person( person ) + "<br/>" for person in people
+				return s
+			n = response.people.length
+			if n <= 3 * 7
+				delta = n / 3
+				split1 = delta
+				split2 = 2 * delta
+				split3 = response.people.length
+				more = 0
+			else
+				split1 = 7
+				split2 = 14
+				split3 = 20
+				more = n - 20
+			$('#col1').html(format_people( response.people[0...split1] )) # 8 people max.
+			$('#col2').html(format_people( response.people[split1...split2] ))
+			if more > 0
+				$('#col3').html(format_people( response.people[split2...split3] ) + "(+" + more + " more)")
+			else
+				$('#col3').html(format_people( response.people[split2...split3] ))
+		)
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
-
-urlpatterns = patterns('',
-    # Pages
-    url(r'^$', 'dashboard.views.home'),
-    url(r'^sevenk$', 'dashboard.views.sevenk'),
-    url(r'^lightweight', 'dashboard.views.lightweight'),
-    # APIs
-    url(r'^events/', include('events.urls')),
-    url(r'^nextbus/', include('nextbus.urls')),
-    url(r'^news/', include('news.urls')),
-    url(r'^weather/', include('weather.urls')),
-    url(r'^laundry/', include('laundry.urls')),
-    url(r'^dining/', include('dining.urls')),
-    url(r'^packages/', include('packages.urls')),
-    url(r'^people/', include('people.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
-)
+		# Run every 10 seconds (for debug)
+		setTimeout( arguments.callee, 300000 )
+	)()

@@ -12,7 +12,7 @@
 
   $(function() {
     return (function() {
-      $.get('/package_list', function(response) {
+      $.get('/packages', function(response) {
         var delta, format_people, format_person, more, n, split1, split2, split3;
         console.log(JSON.stringify(response));
         format_person = function(person) {

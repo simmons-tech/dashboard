@@ -102,7 +102,8 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, "../news/static/"),
     os.path.join(PROJECT_ROOT, "../laundry/static/"),
     os.path.join(PROJECT_ROOT, "../dining/static/"),
-    os.path.join(PROJECT_ROOT, "../package_list/static/"),
+    os.path.join(PROJECT_ROOT, "../packages/static/"),
+    os.path.join(PROJECT_ROOT, "../people/static/"),
 )
 
 # List of finder classes that know how to find static files in
