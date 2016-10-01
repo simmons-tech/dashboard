@@ -39,4 +39,4 @@ def getTopStories(request):
 
     jsonout = json.dumps(choice(news))
     
-    return HttpResponse(jsonout, mimetype="application/json")
+    return HttpResponse(jsonout, content_type="application/json")

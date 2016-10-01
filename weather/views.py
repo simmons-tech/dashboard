@@ -63,7 +63,7 @@ def getWeather(request):
                 'tomorrow': tomorrow,}
     
     jsonout = json.dumps(weather)
-    return HttpResponse(jsonout, mimetype="application/json")
+    return HttpResponse(jsonout, content_type="application/json")
 
 def code2image(code):
     weather = {

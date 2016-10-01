@@ -28,7 +28,7 @@ from sqlalchemy.orm import sessionmaker
 from django.http import HttpResponse
 import json
 
-password = 'password here'
+password = 'pass'
 
 def get_packages(request):
 	db = create_engine('postgresql://dashboard:'+password+'@simmons.mit.edu/sdb')
@@ -66,4 +66,4 @@ def get_packages(request):
 	for p, v in pdict.iteritems():
 		people.append({'owner_name': p, 'number': v})
 	
-	return HttpResponse(json.dumps({'people':people}), mimetype="application/json")
+	return HttpResponse(json.dumps({'people':people}), content_type="application/json")

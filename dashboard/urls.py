@@ -39,7 +39,7 @@ urlpatterns = patterns('',
     url(r'^laundry/', include('laundry.urls')),
     url(r'^dining/', include('dining.urls')),
     url(r'^packages/', include('packages.urls')),
-    url(r'^people/', include('people.urls')),
+    # url(r'^people/', include('people.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

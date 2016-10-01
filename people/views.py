@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from django.http import HttpResponse, Http404
 import json
 
-password = 'password here'
+password = 'pass'
 
 def get_people(request):
 	db = create_engine('postgresql://dashboard:'+password+'@simmons.mit.edu/sdb')
@@ -66,7 +66,7 @@ def get_person(request,username="test"):
 	people = get_people(request)
 	for person in people:
 		if person['kerberos'] == username:
-			return HttpResponse(json.dumps({'person':person}), mimetype="application/json")
+			return HttpResponse(json.dumps({'person':person}), content_type="application/json")
 	raise Http404
 
 def get_active_usernames(request):
@@ -96,4 +96,4 @@ def get_active_usernames(request):
 		if active[ person['kerberos'] ]:
 			usernames.append( person['kerberos'] )
 
-	return HttpResponse(json.dumps({'usernames':usernames}), mimetype="application/json")
+	return HttpResponse(json.dumps({'usernames':usernames}), content_type="application/json")

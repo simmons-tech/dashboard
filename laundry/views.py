@@ -45,4 +45,4 @@ def laundry(request):
 			simmons[room[-3:]] = parseAvalibility( pairs[room] )
 
 	payload = {'laundry': simmons}
-	return HttpResponse(json.dumps(payload), mimetype="application/json")
+	return HttpResponse(json.dumps(payload), content_type="application/json")

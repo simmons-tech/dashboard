@@ -85,4 +85,4 @@ def getDiningMenu(request):
 	today = datetime.datetime.now().date()
 	payload = menus_for_date( today )
 
-	return HttpResponse(json.dumps(payload), mimetype="application/json")
+	return HttpResponse(json.dumps(payload), content_type="application/json")

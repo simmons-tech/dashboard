@@ -60,4 +60,4 @@ def getEvents(request):
     random_event =  choice(events)
         
     jsonout = json.dumps(random_event, indent=4)
-    return HttpResponse(jsonout, mimetype="application/json")
+    return HttpResponse(jsonout, content_type="application/json")

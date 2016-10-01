@@ -32,13 +32,14 @@ def home(request):
 			self.path = path
 
 	slides = []
-	img_urls = requests.get("https://adat.scripts.mit.edu:444/www/dev/simmons/display/dashboard.php").json()
-
+	# img_urls = requests.get("https://adat.scripts.mit.edu:444/www/dev/simmons/display/dashboard.php").json()
+	slides.append(Slide("WIDGET"))
+	# slides.append(Slide("WIDGET"))
 	# naively insert a widget slide after every 2 images
-	for i in range(len(img_urls)):
-		if i % 2:
-			slides.append(Slide("WIDGET"))
-		slides.append(Slide("POSTER", img_urls[i]))
+	# for i in range(len(img_urls)):
+	# 	if i % 2:
+	# 		slides.append(Slide("WIDGET"))
+	# 	slides.append(Slide("POSTER", img_urls[i]))
 	slides.append(Slide("PACKAGE-LIST"))
 
 	return render(request, "index.html", {"slides": slides})

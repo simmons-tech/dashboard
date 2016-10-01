@@ -52,4 +52,4 @@ def getArrival(request):
 
 	times = sorted( times, key=lambda nb: nb['time_till'] )
 
-	return HttpResponse(json.dumps({'buses': times}), mimetype="application/json")
+	return HttpResponse(json.dumps({'buses': times}), content_type="application/json")
